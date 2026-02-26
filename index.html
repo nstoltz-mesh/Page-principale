@@ -225,6 +225,7 @@ main {
   margin-bottom: 64px;
 }
 
+/* La card est un conteneur visuel seulement — pas cliquable */
 .card {
   background: var(--blanc);
   border-radius: 14px;
@@ -232,12 +233,14 @@ main {
   box-shadow: 0 2px 16px rgba(0,34,28,0.07);
   border-top: 4px solid var(--vert-logo);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
   color: inherit;
   display: block;
+  text-decoration: none;
+  /* Pas de cursor: pointer, pas d'action au clic */
 }
 
-.card:hover {
+/* Hover visuel uniquement si la card a un card-link ou onclick */
+.card.clickable:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,34,28,0.12);
   cursor: pointer;
@@ -275,6 +278,7 @@ main {
   margin-bottom: 16px;
 }
 
+/* Seul le card-link est interactif */
 .card-link {
   color: var(--teal);
   font-weight: 600;
@@ -284,10 +288,12 @@ main {
   align-items: center;
   gap: 6px;
   transition: gap 0.3s ease;
+  cursor: pointer;
 }
 
 .card-link:hover {
   gap: 10px;
+  text-decoration: underline;
 }
 
 .card-price {
@@ -336,6 +342,7 @@ main {
 
 .tool-card:hover {
   transform: translateY(-3px);
+  cursor: pointer;
 }
 
 .tool-icon {
@@ -702,7 +709,7 @@ main {
 }
 
 /* ===================================
-   MODALE
+   MODALE — centrage robuste via transform
    =================================== */
 .modal-overlay {
   display: none;
@@ -713,13 +720,11 @@ main {
   height: 100%;
   background: rgba(0, 34, 28, 0.85);
   z-index: 9999;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn 0.3s ease;
+  overflow-y: auto;
 }
 
 .modal-overlay.active {
-  display: flex;
+  display: block;
 }
 
 .modal-content {
@@ -727,12 +732,14 @@ main {
   border-radius: 16px;
   width: 90%;
   max-width: 600px;
-  max-height: 90vh;
-  overflow: hidden;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   box-shadow: 0 8px 32px rgba(0,34,28,0.3);
   border-top: 4px solid var(--vert-logo);
   animation: slideUp 0.3s ease;
+  overflow: hidden;
 }
 
 .modal-header {
@@ -784,11 +791,11 @@ main {
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translate(-50%, calc(-50% + 30px));
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -824,7 +831,8 @@ main {
   .newsletter-section { padding: 32px 24px; }
   .modal-content {
     width: 95%;
-    max-height: 95vh;
+    top: 5%;
+    transform: translate(-50%, 0);
   }
   .modal-body {
     height: 600px;
@@ -909,6 +917,7 @@ html {
     <p class="section-subtitle">Une approche complète pour bâtir et protéger votre patrimoine</p>
     
     <div class="cards-grid">
+      <!-- Card sans lien = pas de hover cliquable -->
       <div class="card">
         <div class="card-icon"><i class="fas fa-chart-line"></i></div>
         <h3>Gestion de placements</h3>
@@ -932,7 +941,7 @@ html {
         <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
         <h3>Coaching financier</h3>
         <p>Pour les investisseurs autonomes qui veulent garder le contrôle tout en bénéficiant d'une expertise professionnelle.</p>
-         <a href="https://www.nicolasstoltz.com/coaching" class="card-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+        <a href="https://www.nicolasstoltz.com/coaching" class="card-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
         <span class="card-price">150 $ / consultation</span>
       </div>
 
@@ -946,39 +955,45 @@ html {
   </section>
 
   <!-- SERVICES COMPLÉMENTAIRES -->
+  <!-- Ces cards sont cliquables (ouvrent la modale) donc gardent la classe clickable -->
   <section id="services-complementaires">
     <h2 class="section-title">Services complémentaires</h2>
     <p class="section-subtitle">Solutions partenaires pour protéger et optimiser votre patrimoine</p>
     
     <div class="cards-grid">
-      <div class="card teal-top" onclick="openModal()">
+      <div class="card teal-top clickable" onclick="openModal()">
         <div class="card-icon"><i class="fas fa-home"></i></div>
         <h3>Courtier immobilier</h3>
         <p>Accompagnement expert pour l'achat ou la vente de votre propriété avec les meilleurs conseillers du marché.</p>
+        <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
       </div>
 
-      <div class="card teal-top" onclick="openModal()">
+      <div class="card teal-top clickable" onclick="openModal()">
         <div class="card-icon"><i class="fas fa-house-user"></i></div>
         <h3>Hypothèque</h3>
         <p>Financement immobilier optimal adapté à votre situation et vos objectifs patrimoniaux.</p>
+        <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
       </div>
 
-      <div class="card teal-top" onclick="openModal()">
+      <div class="card teal-top clickable" onclick="openModal()">
         <div class="card-icon"><i class="fas fa-car"></i></div>
         <h3>Assurance dommage</h3>
         <p>Protection complète pour votre véhicule et votre habitation avec les meilleures garanties.</p>
+        <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
       </div>
 
-      <div class="card teal-top" onclick="openModal()">
+      <div class="card teal-top clickable" onclick="openModal()">
         <div class="card-icon"><i class="fas fa-plane"></i></div>
         <h3>Assurance voyage</h3>
         <p>Couverture optimale pour vos déplacements personnels et professionnels à l'international.</p>
+        <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
       </div>
 
-      <div class="card teal-top" onclick="openModal()">
+      <div class="card teal-top clickable" onclick="openModal()">
         <div class="card-icon"><i class="fas fa-building"></i></div>
         <h3>Assurance collective</h3>
         <p>Solutions d'assurance complètes pour entreprises et régimes collectifs d'employés.</p>
+        <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
       </div>
     </div>
   </section>
@@ -1197,11 +1212,10 @@ html {
 <script>
 // MODALE
 function openModal() {
-  const modal = document.getElementById('contactModal');
-  modal.classList.add('active');
+  const overlay = document.getElementById('contactModal');
+  overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
-  modal.scrollTop = 0;
-  window.scrollTo({ top: 0, behavior: 'instant' });
+  overlay.scrollTop = 0;
 }
 
 function closeModal() {
@@ -1221,12 +1235,13 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
-// SMOOTH SCROLL
+// SMOOTH SCROLL (anchors internes seulement)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    if (this.getAttribute('href') !== '#') {
+    const href = this.getAttribute('href');
+    if (href !== '#') {
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
+      const target = document.querySelector(href);
       if (target) {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }

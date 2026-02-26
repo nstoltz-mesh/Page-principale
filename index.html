@@ -1197,8 +1197,11 @@ html {
 <script>
 // MODALE
 function openModal() {
-  document.getElementById('contactModal').classList.add('active');
+  const modal = document.getElementById('contactModal');
+  modal.classList.add('active');
   document.body.style.overflow = 'hidden';
+  modal.scrollTop = 0;
+  window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 function closeModal() {

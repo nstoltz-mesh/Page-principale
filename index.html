@@ -283,10 +283,10 @@ main { max-width: 1200px; margin: 0 auto; padding: 60px 24px; }
   inset: 0;
   background: rgba(0, 34, 28, 0.82);
   z-index: 9999;
-  align-items: flex-start;   /* aligne vers le haut pour être plus près du top */
+  align-items: center;       /* centré verticalement */
   justify-content: center;
-  padding: 32px 16px;        /* espace min depuis le bord haut/bas du viewport */
-  overflow-y: auto;          /* permet à l'overlay lui-même de scroller si vraiment très petit écran */
+  padding: 16px;             /* marge min sur tous les bords */
+  overflow-y: auto;
 }
 .modal-overlay.active {
   display: flex;
@@ -296,25 +296,24 @@ main { max-width: 1200px; margin: 0 auto; padding: 60px 24px; }
   background: var(--blanc);
   border-radius: 16px;
   width: 100%;
-  max-width: 660px;          /* plus large qu'avant (580 → 660) */
+  max-width: 660px;
   position: relative;
   box-shadow: 0 8px 32px rgba(0,34,28,0.3);
   border-top: 4px solid var(--vert-logo);
   animation: slideUp 0.3s ease;
   overflow: hidden;
-  /* S'assure que la modale ne dépasse jamais le viewport */
-  max-height: calc(100vh - 64px);
+  max-height: calc(100vh - 32px); /* toujours dans le viewport */
   display: flex;
   flex-direction: column;
 }
 
 .modal-header {
-  padding: 14px 20px 12px;   /* réduit par rapport aux 20px/24px précédents */
+  padding: 14px 20px 12px;
   border-bottom: 1px solid var(--gris-clair);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-shrink: 0;            /* le header ne rétrécit pas */
+  flex-shrink: 0;
 }
 .modal-title {
   font-family: 'Playfair Display', serif;
@@ -332,16 +331,15 @@ main { max-width: 1200px; margin: 0 auto; padding: 60px 24px; }
 }
 .modal-close:hover { background: var(--gris-clair); color: var(--vert-fonce); }
 
-/* Le body prend tout l'espace restant et scroll si nécessaire */
 .modal-body {
   flex: 1;
   overflow-y: auto;
-  min-height: 0;             /* requis pour que flex+overflow fonctionne */
+  min-height: 0;
 }
 
 .modal-body iframe {
   width: 100%;
-  height: 620px;             /* plus grand qu'avant (577 → 620) pour voir tout le formulaire */
+  height: 520px;   /* réduit de 620 → 520 pour tenir dans le viewport */
   border: none;
   display: block;
 }
@@ -375,9 +373,9 @@ html { scroll-behavior: smooth; }
   .about-section { padding: 32px 24px; }
   .contact-section { padding: 40px 24px; }
   .newsletter-section { padding: 32px 24px; }
-  .modal-overlay { padding: 16px 12px; }
+  .modal-overlay { padding: 12px; }
   .modal-content { max-width: 100%; }
-  .modal-body iframe { height: 580px; }
+  .modal-body iframe { height: 480px; }
   .carousel-item { width: 140px; height: 80px; }
   .carousel-track { gap: 40px; }
 }

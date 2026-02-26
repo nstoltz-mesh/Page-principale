@@ -555,7 +555,115 @@ main {
 }
 
 /* ===================================
-   INFOLETTRE (NOUVEAU)
+   CONTACT
+   =================================== */
+.contact-section {
+  background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%);
+  border-radius: 16px;
+  padding: 56px 48px;
+  margin-bottom: 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--blanc);
+  margin-bottom: 16px;
+}
+
+.contact-section > p {
+  color: var(--bleu-clair);
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+  max-width: 700px;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--blanc);
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  color: var(--bleu-clair);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  width: 100%;
+}
+
+.contact-value {
+  color: var(--blanc);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.contact-value a {
+  color: var(--blanc);
+  text-decoration: none;
+}
+
+.contact-value a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.social-link {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanc);
+  font-size: 1.3rem;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-3px);
+}
+
+/* ===================================
+   INFOLETTRE
    =================================== */
 .newsletter-section {
   background: var(--blanc);
@@ -683,114 +791,6 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* ===================================
-   CONTACT
-   =================================== */
-.contact-section {
-  background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%);
-  border-radius: 16px;
-  padding: 56px 48px;
-  margin-bottom: 64px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  color: var(--blanc);
-  margin-bottom: 16px;
-}
-
-.contact-section > p {
-  color: var(--bleu-clair);
-  font-size: 1.05rem;
-  margin-bottom: 32px;
-  max-width: 700px;
-}
-
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
-  margin-bottom: 32px;
-  width: 100%;
-  max-width: 800px;
-}
-
-.contact-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.contact-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.13);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  color: var(--blanc);
-}
-
-.contact-label {
-  font-size: 0.75rem;
-  color: var(--bleu-clair);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  text-align: center;
-  width: 100%;
-}
-
-.contact-value {
-  color: var(--blanc);
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-align: center;
-}
-
-.contact-value a {
-  color: var(--blanc);
-  text-decoration: none;
-}
-
-.contact-value a:hover {
-  text-decoration: underline;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 32px;
-}
-
-.social-link {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.13);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blanc);
-  font-size: 1.3rem;
-  text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.25);
-  transition: all 0.3s ease;
-}
-
-.social-link:hover {
-  background: rgba(255,255,255,0.25);
-  transform: translateY(-3px);
 }
 
 /* ===================================
@@ -1111,34 +1111,7 @@ html {
     </a>
   </section>
 
-  <!-- INFOLETTRE (NOUVEAU) -->
-  <section class="newsletter-section">
-    <div class="newsletter-header">
-      <h2>Restez informé</h2>
-      <p>Chaque semaine, recevez un condensé de l'actualité économique et des conseils pratiques pour optimiser vos finances personnelles.</p>
-    </div>
-    <div class="newsletter-form-container">
-      <iframe
-        src="https://api.leadconnectorhq.com/widget/form/lukuqxjwoKowYqsh773U"
-        style="width:100%;height:551px;border:none;border-radius:18px"
-        id="inline-lukuqxjwoKowYqsh773U" 
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="Infolettre Form"
-        data-height="551"
-        data-layout-iframe-id="inline-lukuqxjwoKowYqsh773U"
-        data-form-id="lukuqxjwoKowYqsh773U"
-        title="Infolettre Form"
-      ></iframe>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
+  <!-- CONTACT (DÉPLACÉ AVANT INFOLETTRE) -->
   <section class="contact-section">
     <h2>Prêt à passer à l'action ?</h2>
     <p>Discutons de vos objectifs et voyons comment je peux vous accompagner</p>
@@ -1173,6 +1146,33 @@ html {
       <a href="https://www.instagram.com/nicolas.stoltz/" target="_blank" class="social-link" title="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
+    </div>
+  </section>
+
+  <!-- INFOLETTRE (DÉPLACÉE APRÈS CONTACT) -->
+  <section class="newsletter-section">
+    <div class="newsletter-header">
+      <h2>Restez informé</h2>
+      <p>Chaque semaine, recevez un condensé de l'actualité économique et des conseils pratiques pour optimiser vos finances personnelles.</p>
+    </div>
+    <div class="newsletter-form-container">
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/lukuqxjwoKowYqsh773U"
+        style="width:100%;height:551px;border:none;border-radius:18px"
+        id="inline-lukuqxjwoKowYqsh773U" 
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Infolettre Form"
+        data-height="551"
+        data-layout-iframe-id="inline-lukuqxjwoKowYqsh773U"
+        data-form-id="lukuqxjwoKowYqsh773U"
+        title="Infolettre Form"
+      ></iframe>
     </div>
   </section>
 

@@ -534,7 +534,7 @@ main {
 
 /* ===================================
    SECTION CONTACT (Gradient)
-   FIX FINAL : Centrage parfait de tous les éléments
+   FIX FINAL : Espacement uniforme entre les items
    =================================== */
 .contact-section {
   background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%);
@@ -561,14 +561,14 @@ main {
   max-width: 700px;
 }
 
-/* Grid des infos de contact */
+/* Grid des infos de contact - FIX : Grid au lieu de flex pour espacement égal */
 .contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 48px;
-  flex-wrap: wrap;
+  display: grid;                              /* FIX : Grid pour espacement uniforme */
+  grid-template-columns: repeat(3, 1fr);     /* FIX : 3 colonnes égales */
+  gap: 48px;                                  /* Espacement entre les items */
   margin-bottom: 32px;
   width: 100%;
+  max-width: 800px;                           /* Limite la largeur totale */
 }
 
 .contact-item {
@@ -591,21 +591,21 @@ main {
   color: var(--blanc);
 }
 
-/* FIX FINAL : Centrage des labels EMAIL / TÉLÉPHONE / LOCALISATION */
+/* Labels (EMAIL / TÉLÉPHONE / LOCALISATION) */
 .contact-label {
   font-size: 0.75rem;
   color: var(--bleu-clair);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  text-align: center;  /* FIX : Ajout du centrage */
-  width: 100%;         /* FIX : Prend toute la largeur du parent */
+  text-align: center;
+  width: 100%;
 }
 
 .contact-value {
   color: var(--blanc);
   font-weight: 600;
   font-size: 0.95rem;
-  text-align: center;  /* FIX : Centrage aussi pour les valeurs */
+  text-align: center;
 }
 
 .contact-value a {
@@ -673,7 +673,10 @@ main {
   .section-title { font-size: 1.6rem; }
   .cards-grid { grid-template-columns: 1fr; }
   .tools-grid { grid-template-columns: 1fr; }
-  .contact-info { gap: 24px; }
+  .contact-info { 
+    grid-template-columns: 1fr;  /* FIX : Une seule colonne sur mobile */
+    gap: 32px; 
+  }
   .about-section { padding: 32px 24px; }
   .contact-section { padding: 40px 24px; }
 }

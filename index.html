@@ -17,17 +17,16 @@
 
 /* ===================================
    VARIABLES CSS (Palette de couleurs)
-   Modifiez ces valeurs pour changer toute la palette du site
    =================================== */
 :root {
-  --vert-logo: #4e7a51;        /* Couleur principale - vert logo */
-  --bleu-clair: #a5cfe3;       /* Bleu clair pour accents */
-  --vert-fonce: #00221c;       /* Vert très foncé pour titres */
-  --teal: #018476;             /* Teal pour accents secondaires */
-  --bleu-pale: #e7f6fc;        /* Bleu très pâle (backgrounds) */
-  --blanc: #ffffff;            /* Blanc pur */
-  --gris-clair: #f5f9f5;       /* Gris très clair (fond global) */
-  --texte: #1a1a1a;            /* Couleur texte principal */
+  --vert-logo: #4e7a51;
+  --bleu-clair: #a5cfe3;
+  --vert-fonce: #00221c;
+  --teal: #018476;
+  --bleu-pale: #e7f6fc;
+  --blanc: #ffffff;
+  --gris-clair: #f5f9f5;
+  --texte: #1a1a1a;
 }
 
 /* ===================================
@@ -47,24 +46,23 @@ body {
 }
 
 /* ===================================
-   HERO SECTION (Bandeau d'en-tête)
-   Modifiez padding pour ajuster la hauteur
+   HERO SECTION
    =================================== */
 .hero {
   width: 100%;
   background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%);
-  padding: 80px 32px 64px;  /* Ajustez ces valeurs pour changer la hauteur */
+  padding: 80px 32px 64px;
   text-align: center;
 }
 
 .hero-content {
-  max-width: 900px;  /* Largeur maximale du contenu */
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;  /* Taille du titre principal */
+  font-size: 3rem;
   font-weight: 700;
   color: var(--blanc);
   line-height: 1.2;
@@ -72,13 +70,12 @@ body {
 }
 
 .hero p {
-  font-size: 1.15rem;  /* Taille du sous-titre */
+  font-size: 1.15rem;
   color: var(--bleu-clair);
   margin-bottom: 40px;
   line-height: 1.7;
 }
 
-/* Conteneur des boutons CTA du hero */
 .hero-cta {
   display: flex;
   gap: 16px;
@@ -87,12 +84,11 @@ body {
 }
 
 /* ===================================
-   BOUTONS (Call-to-Action)
-   Modifiez les couleurs et padding ici
+   BOUTONS
    =================================== */
 .btn {
   display: inline-block;
-  padding: 14px 32px;  /* Ajustez pour des boutons plus grands/petits */
+  padding: 14px 32px;
   border-radius: 10px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -103,7 +99,6 @@ body {
   border: none;
 }
 
-/* Bouton principal (bleu clair) */
 .btn-primary {
   background: var(--bleu-clair);
   color: var(--vert-fonce);
@@ -111,10 +106,9 @@ body {
 
 .btn-primary:hover {
   background: var(--blanc);
-  transform: translateY(-2px);  /* Léger déplacement au hover */
+  transform: translateY(-2px);
 }
 
-/* Bouton secondaire (transparent avec bordure) */
 .btn-secondary {
   background: rgba(255,255,255,0.13);
   color: var(--blanc);
@@ -130,9 +124,9 @@ body {
    CONTENEUR PRINCIPAL
    =================================== */
 main {
-  max-width: 1200px;  /* Largeur maximale du contenu */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 24px;  /* Espacement vertical et horizontal */
+  padding: 60px 24px;
 }
 
 /* ===================================
@@ -140,7 +134,7 @@ main {
    =================================== */
 .section-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;  /* Taille des titres de section */
+  font-size: 2rem;
   font-weight: 600;
   color: var(--vert-fonce);
   text-align: center;
@@ -158,7 +152,7 @@ main {
 }
 
 /* ===================================
-   BARRE DE CRÉDIBILITÉ (Certifications)
+   CRÉDIBILITÉ
    =================================== */
 .credibility {
   background: var(--blanc);
@@ -171,7 +165,7 @@ main {
 
 .cred-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Grille responsive */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 32px;
   text-align: center;
 }
@@ -182,7 +176,6 @@ main {
   align-items: center;
 }
 
-/* Icônes circulaires de crédibilité */
 .cred-icon {
   width: 56px;
   height: 56px;
@@ -211,7 +204,6 @@ main {
   line-height: 1.4;
 }
 
-/* Badge "en cours" pour certifications */
 .badge-pending {
   display: inline-block;
   background: #fff3cd;
@@ -224,8 +216,7 @@ main {
 }
 
 /* ===================================
-   GRILLE DE CARDS (Services, etc.)
-   Ajustez minmax(280px) pour changer la largeur minimale des cards
+   GRILLE DE CARDS
    =================================== */
 .cards-grid {
   display: grid;
@@ -234,32 +225,28 @@ main {
   margin-bottom: 64px;
 }
 
-/* Style des cards individuelles */
 .card {
   background: var(--blanc);
   border-radius: 14px;
   padding: 32px;
   box-shadow: 0 2px 16px rgba(0,34,28,0.07);
-  border-top: 4px solid var(--vert-logo);  /* Bordure colorée en haut */
+  border-top: 4px solid var(--vert-logo);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   color: inherit;
   display: block;
 }
 
-/* Effet au survol des cards */
 .card:hover {
-  transform: translateY(-4px);  /* Léger déplacement vers le haut */
+  transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,34,28,0.12);
   cursor: pointer;
 }
 
-/* Variante avec bordure teal */
 .card.teal-top { 
   border-top-color: var(--teal); 
 }
 
-/* Icône de la card */
 .card-icon {
   width: 48px;
   height: 48px;
@@ -288,7 +275,6 @@ main {
   margin-bottom: 16px;
 }
 
-/* Lien "En savoir plus" dans les cards */
 .card-link {
   color: var(--teal);
   font-weight: 600;
@@ -301,10 +287,9 @@ main {
 }
 
 .card-link:hover {
-  gap: 10px;  /* Écartement de la flèche au hover */
+  gap: 10px;
 }
 
-/* Badge de prix dans les cards */
 .card-price {
   display: inline-block;
   background: #e8f4e9;
@@ -317,7 +302,7 @@ main {
 }
 
 /* ===================================
-   SECTION OUTILS (Calculateurs)
+   OUTILS
    =================================== */
 .tools-grid {
   display: grid;
@@ -339,7 +324,6 @@ main {
   display: block;
 }
 
-/* Bordure gradient en haut des tool-cards */
 .tool-card::before {
   content: '';
   position: absolute;
@@ -374,20 +358,8 @@ main {
   line-height: 1.5;
 }
 
-/* Badge "Bientôt disponible" */
-.badge-soon {
-  display: inline-block;
-  background: #fff3cd;
-  color: #856404;
-  padding: 3px 10px;
-  border-radius: 12px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  margin-top: 8px;
-}
-
 /* ===================================
-   SECTION À PROPOS
+   À PROPOS
    =================================== */
 .about-section {
   background: var(--blanc);
@@ -396,7 +368,7 @@ main {
   margin-bottom: 64px;
   box-shadow: 0 2px 16px rgba(0,34,28,0.07);
   display: grid;
-  grid-template-columns: 1fr 300px;  /* Texte | Photo */
+  grid-template-columns: 1fr 300px;
   gap: 48px;
   align-items: center;
 }
@@ -415,7 +387,6 @@ main {
   margin-bottom: 16px;
 }
 
-/* Liste des points forts "checkmark" */
 .about-highlights {
   display: flex;
   flex-direction: column;
@@ -448,7 +419,6 @@ main {
   font-weight: 500;
 }
 
-/* Photo professionnelle */
 .about-image {
   border-radius: 12px;
   overflow: hidden;
@@ -462,23 +432,84 @@ main {
   display: block;
 }
 
-/* Responsive pour tablettes/mobiles */
-@media(max-width: 900px) {
-  .about-section {
-    grid-template-columns: 1fr;  /* Une seule colonne */
-    text-align: center;
+/* ===================================
+   PARTENAIRES CARROUSEL (NOUVEAU)
+   =================================== */
+.partners-section {
+  background: var(--blanc);
+  border-radius: 16px;
+  padding: 48px 32px;
+  margin-bottom: 64px;
+  box-shadow: 0 2px 16px rgba(0,34,28,0.07);
+  overflow: hidden;
+}
+
+.partners-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--vert-fonce);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* Conteneur du carrousel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+/* Track du carrousel (contient tous les logos) */
+.carousel-track {
+  display: flex;
+  gap: 60px;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+/* Pause l'animation au hover */
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+/* Item du carrousel (chaque logo) */
+.carousel-item {
+  flex-shrink: 0;
+  width: 180px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.4s ease;
+}
+
+.carousel-item:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Animation de défilement infini */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  .about-image {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  .about-highlights {
-    align-items: center;
+  100% {
+    transform: translateX(-50%);
   }
 }
 
 /* ===================================
-   SECTION TÉMOIGNAGES / GOOGLE REVIEWS
+   TÉMOIGNAGES
    =================================== */
 .testimonials-section {
   background: var(--blanc);
@@ -502,7 +533,6 @@ main {
   margin-bottom: 32px;
 }
 
-/* Conteneur des étoiles Google */
 .google-rating {
   display: flex;
   align-items: center;
@@ -512,7 +542,7 @@ main {
 }
 
 .stars {
-  color: #fbbf24;  /* Couleur or pour les étoiles */
+  color: #fbbf24;
   font-size: 1.8rem;
   letter-spacing: 4px;
 }
@@ -523,13 +553,6 @@ main {
   font-weight: 600;
 }
 
-/* Logo Google */
-.google-logo {
-  width: 120px;
-  margin: 0 auto 24px;
-}
-
-/* Texte d'instructions */
 .testimonials-cta {
   font-size: 0.95rem;
   color: #666;
@@ -537,7 +560,7 @@ main {
 }
 
 /* ===================================
-   MODALE (Popup pour formulaire GHL)
+   MODALE
    =================================== */
 .modal-overlay {
   display: none;
@@ -628,7 +651,7 @@ main {
 }
 
 /* ===================================
-   SECTION CONTACT (Gradient)
+   CONTACT
    =================================== */
 .contact-section {
   background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%);
@@ -655,7 +678,6 @@ main {
   max-width: 700px;
 }
 
-/* Grid des infos de contact */
 .contact-info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -672,7 +694,6 @@ main {
   gap: 8px;
 }
 
-/* Icônes de contact circulaires */
 .contact-icon {
   width: 48px;
   height: 48px;
@@ -685,7 +706,6 @@ main {
   color: var(--blanc);
 }
 
-/* Labels (EMAIL / TÉLÉPHONE / LOCALISATION) */
 .contact-label {
   font-size: 0.75rem;
   color: var(--bleu-clair);
@@ -711,7 +731,6 @@ main {
   text-decoration: underline;
 }
 
-/* Liens de réseaux sociaux */
 .social-links {
   display: flex;
   justify-content: center;
@@ -740,7 +759,7 @@ main {
 }
 
 /* ===================================
-   NOTE DE FOOTER (Mention MESH)
+   FOOTER
    =================================== */
 .footer-note {
   text-align: center;
@@ -759,8 +778,22 @@ main {
 }
 
 /* ===================================
-   RESPONSIVE DESIGN (Mobile)
+   RESPONSIVE
    =================================== */
+@media(max-width: 900px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-image {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .about-highlights {
+    align-items: center;
+  }
+}
+
 @media(max-width: 768px) {
   .hero h1 { font-size: 2rem; }
   .hero p { font-size: 1rem; }
@@ -780,18 +813,22 @@ main {
   .modal-body {
     height: 600px;
   }
+  .carousel-item {
+    width: 140px;
+    height: 80px;
+  }
+  .carousel-track {
+    gap: 40px;
+  }
 }
 
 /* ===================================
-   SMOOTH SCROLL (Défilement fluide)
+   ANIMATIONS
    =================================== */
 html {
   scroll-behavior: smooth;
 }
 
-/* ===================================
-   ANIMATIONS (Fade in au scroll)
-   =================================== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -810,17 +847,13 @@ html {
 </head>
 <body>
 
-<!-- ===================================
-     HERO SECTION (Bandeau d'accueil)
-     =================================== -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content fade-in">
     <h1>Transformer vos ambitions en résultats concrets</h1>
     <p>Je transforme les tendances en stratégies concrètes pour sécuriser et faire croître votre patrimoine familial.</p>
     <div class="hero-cta">
-      <!-- Bouton principal : Prendre RDV -->
       <a href="https://api.leadconnectorhq.com/widget/booking/Ji600NehzD0aMO3Dl5A5?backgroundColor=%23ffffff&primaryColor=%234e7a51FF&buttonText=Prendre+Rendez-vous&showCalendarTitle=true&showCalendarDescription=true&showCalendarDetails=true&default=false" class="btn btn-primary" target="_blank">Prendre rendez-vous</a>
-      <!-- Bouton secondaire : Scroll vers services -->
       <a href="#services" class="btn btn-secondary">Découvrir mes services</a>
     </div>
   </div>
@@ -828,30 +861,24 @@ html {
 
 <main>
 
-  <!-- ===================================
-       BARRE DE CRÉDIBILITÉ (Certifications)
-       =================================== -->
+  <!-- CRÉDIBILITÉ -->
   <section class="credibility fade-in">
     <div class="cred-grid">
-      <!-- Item 1 : Expérience -->
       <div class="cred-item">
         <div class="cred-icon"><i class="fas fa-calendar-alt"></i></div>
         <div class="cred-label">Expérience</div>
         <div class="cred-value">Depuis 2019</div>
       </div>
-      <!-- Item 2 : Représentant de courtiers -->
       <div class="cred-item">
         <div class="cred-icon"><i class="fas fa-chart-line"></i></div>
         <div class="cred-label">Certification</div>
         <div class="cred-value">Représentant de courtiers<br>(épargne collective)</div>
       </div>
-      <!-- Item 3 : Assurance de personnes -->
       <div class="cred-item">
         <div class="cred-icon"><i class="fas fa-shield-alt"></i></div>
         <div class="cred-label">Certification</div>
         <div class="cred-value">Assurance de personnes</div>
       </div>
-      <!-- Item 4 : Planificateur financier (en cours) -->
       <div class="cred-item">
         <div class="cred-icon"><i class="fas fa-graduation-cap"></i></div>
         <div class="cred-label">En cours</div>
@@ -860,15 +887,12 @@ html {
     </div>
   </section>
 
-  <!-- ===================================
-       SECTION SERVICES PRINCIPAUX
-       =================================== -->
+  <!-- SERVICES PRINCIPAUX -->
   <section id="services">
     <h2 class="section-title">Services</h2>
     <p class="section-subtitle">Une approche complète pour bâtir et protéger votre patrimoine</p>
     
     <div class="cards-grid">
-      <!-- Service 1 : Gestion de placements -->
       <div class="card">
         <div class="card-icon"><i class="fas fa-chart-line"></i></div>
         <h3>Gestion de placements</h3>
@@ -876,21 +900,18 @@ html {
         <a href="https://www.nicolasstoltz.com/placements" class="card-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
       </div>
 
-      <!-- Service 2 : Planification financière -->
       <div class="card teal-top">
         <div class="card-icon"><i class="fas fa-bullseye"></i></div>
         <h3>Planification financière</h3>
         <p>Planification de retraite, optimisation fiscale et gestion des flux monétaires pour sécuriser votre avenir familial.</p>
       </div>
 
-      <!-- Service 3 : Assurances de personnes -->
       <div class="card">
         <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
         <h3>Assurances de personnes</h3>
         <p>Protection complète : assurance temporaire, permanente, maladies graves et invalidité selon vos besoins réels.</p>
       </div>
 
-      <!-- Service 4 : Coaching financier -->
       <div class="card teal-top">
         <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
         <h3>Coaching financier</h3>
@@ -898,7 +919,6 @@ html {
         <span class="card-price">150 $ / consultation</span>
       </div>
 
-      <!-- Service 5 : Déclaration de revenus -->
       <div class="card">
         <div class="card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
         <h3>Déclaration de revenus</h3>
@@ -907,44 +927,36 @@ html {
     </div>
   </section>
 
-  <!-- ===================================
-       SECTION SERVICES COMPLÉMENTAIRES (NOUVEAUTÉ)
-       Cards cliquables qui ouvrent la modale formulaire
-       =================================== -->
+  <!-- SERVICES COMPLÉMENTAIRES -->
   <section id="services-complementaires">
     <h2 class="section-title">Services complémentaires</h2>
     <p class="section-subtitle">Solutions partenaires pour protéger et optimiser votre patrimoine</p>
     
     <div class="cards-grid">
-      <!-- Service 1 : Courtier immobilier -->
       <div class="card teal-top" onclick="openModal()">
         <div class="card-icon"><i class="fas fa-home"></i></div>
         <h3>Courtier immobilier</h3>
         <p>Accompagnement expert pour l'achat ou la vente de votre propriété avec les meilleurs conseillers du marché.</p>
       </div>
 
-      <!-- Service 2 : Hypothèque -->
       <div class="card teal-top" onclick="openModal()">
         <div class="card-icon"><i class="fas fa-house-user"></i></div>
         <h3>Hypothèque</h3>
         <p>Financement immobilier optimal adapté à votre situation et vos objectifs patrimoniaux.</p>
       </div>
 
-      <!-- Service 3 : Assurance dommage -->
       <div class="card teal-top" onclick="openModal()">
         <div class="card-icon"><i class="fas fa-car"></i></div>
         <h3>Assurance dommage</h3>
         <p>Protection complète pour votre véhicule et votre habitation avec les meilleures garanties.</p>
       </div>
 
-      <!-- Service 4 : Assurance voyage -->
       <div class="card teal-top" onclick="openModal()">
         <div class="card-icon"><i class="fas fa-plane"></i></div>
         <h3>Assurance voyage</h3>
         <p>Couverture optimale pour vos déplacements personnels et professionnels à l'international.</p>
       </div>
 
-      <!-- Service 5 : Assurance collective -->
       <div class="card teal-top" onclick="openModal()">
         <div class="card-icon"><i class="fas fa-building"></i></div>
         <h3>Assurance collective</h3>
@@ -953,36 +965,30 @@ html {
     </div>
   </section>
 
-  <!-- ===================================
-       SECTION OUTILS GRATUITS
-       =================================== -->
+  <!-- OUTILS GRATUITS -->
   <section id="outils">
     <h2 class="section-title">Outils gratuits</h2>
     <p class="section-subtitle">Calculateurs et ressources pour mieux comprendre vos finances</p>
     
     <div class="tools-grid">
-      <!-- Outil 1 : Intérêts composés -->
       <a href="https://www.nicolasstoltz.com/calculateur-intrets-composes" class="tool-card">
         <div class="tool-icon"><i class="fas fa-piggy-bank"></i></div>
         <h4>Calculateur d'intérêts composés</h4>
         <p>Projetez la croissance de vos investissements dans le temps</p>
       </a>
 
-      <!-- Outil 2 : Coût d'emprunt -->
       <a href="https://www.nicolasstoltz.com/calculatrice-emprunt" class="tool-card">
         <div class="tool-icon"><i class="fas fa-money-bill-wave"></i></div>
         <h4>Calculateur de coût d'emprunt</h4>
         <p>Estimez le coût réel de vos emprunts et financements</p>
       </a>
 
-      <!-- Outil 3 : Table d'impôts -->
       <a href="https://www.nicolasstoltz.com/table-impots" class="tool-card">
         <div class="tool-icon"><i class="fas fa-file-invoice"></i></div>
         <h4>Table d'impôts — Québec</h4>
         <p>Consultez les tranches d'imposition et taux effectifs</p>
       </a>
 
-      <!-- Outil 4 : Frais de service -->
       <a href="https://www.nicolasstoltz.com/honoraires" class="tool-card">
         <div class="tool-icon"><i class="fas fa-gem"></i></div>
         <h4>Frais de service</h4>
@@ -991,16 +997,13 @@ html {
     </div>
   </section>
 
-  <!-- ===================================
-       SECTION À PROPOS
-       =================================== -->
+  <!-- À PROPOS -->
   <section class="about-section">
     <div class="about-text">
       <h2>Une approche centrée sur vos objectifs</h2>
       <p>Depuis 2019, j'accompagne des familles et entrepreneurs dans la construction et la protection de leur patrimoine. Mon approche repose sur l'écoute, la transparence et l'adaptation aux tendances du marché.</p>
       <p>Je crois qu'une planification financière efficace doit être dynamique, évolutive et alignée avec vos véritables priorités de vie.</p>
       
-      <!-- Liste des avantages -->
       <div class="about-highlights">
         <div class="highlight-item">
           <div class="highlight-icon"><i class="fas fa-check"></i></div>
@@ -1016,20 +1019,50 @@ html {
         </div>
       </div>
     </div>
-    <!-- Photo professionnelle -->
     <div class="about-image">
       <img src="https://assets.cdn.filesafe.space/yXR4W1RlW4PLwXeWvNCc/media/69a06abee545dd8284dd8c8e.png" alt="Nicolas Stoltz, Conseiller en sécurité financière">
     </div>
   </section>
 
-  <!-- ===================================
-       SECTION TÉMOIGNAGES / GOOGLE REVIEWS
-       =================================== -->
+  <!-- PARTENAIRES CARROUSEL (NOUVEAU) -->
+  <section class="partners-section">
+    <h2>Mes partenaires</h2>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <!-- Premier set de logos -->
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d32ccd232a317a21cb916.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d32a8d232a31ae91cb733.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d325b1284286d72c7837b.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d321a4687e144f3bf5878.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d31fa4687e12e0fbf54c1.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d31ceb8fc44cf0da8f39a.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503fac681f2d64191b2ba9.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503c306b97b27d15fcfa85.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503c305cc84732d0fc28d4.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503c305cc8471ea8fc28d5.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503c304a13d59d04243713.png" alt="Partenaire"></div>
+        
+        <!-- Duplication pour boucle infinie -->
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d32ccd232a317a21cb916.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d32a8d232a31ae91cb733.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d325b1284286d72c7837b.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d321a4687e144f3bf5878.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d31fa4687e12e0fbf54c1.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d31ceb8fc44cf0da8f39a.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503fac681f2d64191b2ba9.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503c306b97b27d15fcfa85.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503c305cc84732d0fc28d4.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503c305cc8471ea8fc28d5.png" alt="Partenaire"></div>
+        <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503c304a13d59d04243713.png" alt="Partenaire"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
   <section class="testimonials-section">
     <h2>Ce que disent mes clients</h2>
     <p>Découvrez les avis authentiques de clients accompagnés</p>
     
-    <!-- Affichage des étoiles Google -->
     <div class="google-rating">
       <div class="stars">★★★★★</div>
       <div class="rating-text">5.0 / 5</div>
@@ -1037,34 +1070,27 @@ html {
     
     <p class="testimonials-cta">Consultez mes avis clients vérifiés sur Google</p>
     
-    <!-- Bouton vers Google Reviews -->
     <a href="#" class="btn btn-primary" target="_blank">
       <i class="fab fa-google"></i> Voir les avis Google
     </a>
   </section>
 
-  <!-- ===================================
-       SECTION CONTACT
-       =================================== -->
+  <!-- CONTACT -->
   <section class="contact-section">
     <h2>Prêt à passer à l'action ?</h2>
     <p>Discutons de vos objectifs et voyons comment je peux vous accompagner</p>
     
-    <!-- Grid des informations de contact -->
     <div class="contact-info">
-      <!-- Email -->
       <div class="contact-item">
         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
         <div class="contact-label">Email</div>
         <div class="contact-value"><a href="mailto:nstoltz@sentinelgroup.ca">nstoltz@sentinelgroup.ca</a></div>
       </div>
-      <!-- Téléphone -->
       <div class="contact-item">
         <div class="contact-icon"><i class="fas fa-phone"></i></div>
         <div class="contact-label">Téléphone</div>
         <div class="contact-value"><a href="tel:5819966708">581-996-6708</a></div>
       </div>
-      <!-- Localisation -->
       <div class="contact-item">
         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
         <div class="contact-label">Localisation</div>
@@ -1072,10 +1098,8 @@ html {
       </div>
     </div>
 
-    <!-- Bouton CTA principal -->
     <a href="https://api.leadconnectorhq.com/widget/booking/Ji600NehzD0aMO3Dl5A5?backgroundColor=%23ffffff&primaryColor=%234e7a51FF&buttonText=Prendre+Rendez-vous&showCalendarTitle=true&showCalendarDescription=true&showCalendarDetails=true&default=false" class="btn btn-primary" target="_blank">Prendre rendez-vous</a>
 
-    <!-- Liens réseaux sociaux -->
     <div class="social-links">
       <a href="https://www.linkedin.com/in/nicolas-stoltz-4a5b92190/" target="_blank" class="social-link" title="LinkedIn">
         <i class="fab fa-linkedin-in"></i>
@@ -1091,9 +1115,7 @@ html {
 
 </main>
 
-<!-- ===================================
-     MODALE FORMULAIRE (Popup GoHighLevel)
-     =================================== -->
+<!-- MODALE -->
 <div class="modal-overlay" id="contactModal" onclick="closeModalOnOverlay(event)">
   <div class="modal-content">
     <div class="modal-header">
@@ -1101,7 +1123,6 @@ html {
       <button class="modal-close" onclick="closeModal()">&times;</button>
     </div>
     <div class="modal-body">
-      <!-- Iframe GoHighLevel -->
       <iframe
         src="https://api.leadconnectorhq.com/widget/form/PlOikC6JPA7gzdAQJkC6"
         style="width:100%;height:100%;border:none;"
@@ -1123,28 +1144,24 @@ html {
   </div>
 </div>
 
-<!-- ===================================
-     FOOTER NOTE (Mention MESH Solutions)
-     =================================== -->
+<!-- FOOTER -->
 <div class="footer-note">
   <p>Site propulsé par <a href="#" target="_blank">MESH Solutions</a></p>
 </div>
 
-<!-- ===================================
-     JAVASCRIPT (Interactions + Modale)
-     =================================== -->
+<!-- SCRIPTS -->
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 <script>
-// ===== GESTION MODALE =====
+// MODALE
 function openModal() {
   document.getElementById('contactModal').classList.add('active');
-  document.body.style.overflow = 'hidden'; // Empêche le scroll de la page
+  document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
   document.getElementById('contactModal').classList.remove('active');
-  document.body.style.overflow = ''; // Réactive le scroll
+  document.body.style.overflow = '';
 }
 
 function closeModalOnOverlay(event) {
@@ -1153,14 +1170,13 @@ function closeModalOnOverlay(event) {
   }
 }
 
-// Fermeture au clavier (touche Escape)
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
     closeModal();
   }
 });
 
-// ===== SMOOTH SCROLL =====
+// SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     if (this.getAttribute('href') !== '#') {
@@ -1173,7 +1189,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ===== ANIMATION AU SCROLL =====
+// ANIMATION AU SCROLL
 const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -50px 0px'

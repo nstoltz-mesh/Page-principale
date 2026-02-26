@@ -5,21 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nicolas Stoltz | Services Financiers — Conseiller en sécurité financière, Québec</title>
 <meta name="description" content="Transformation de vos ambitions en résultats concrets. Planification financière, gestion de placements, assurances et coaching financier à Québec.">
+
+<!-- Font Awesome pour les icônes professionnelles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
+/* ===================================
+   IMPORTATION DES POLICES
+   =================================== */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* ===================================
+   VARIABLES CSS (Palette de couleurs)
+   Modifiez ces valeurs pour changer toute la palette du site
+   =================================== */
 :root {
-  --vert-logo: #4e7a51;
-  --bleu-clair: #a5cfe3;
-  --vert-fonce: #00221c;
-  --teal: #018476;
-  --bleu-pale: #e7f6fc;
-  --blanc: #ffffff;
-  --gris-clair: #f5f9f5;
-  --texte: #1a1a1a;
+  --vert-logo: #4e7a51;        /* Couleur principale - vert logo */
+  --bleu-clair: #a5cfe3;       /* Bleu clair pour accents */
+  --vert-fonce: #00221c;       /* Vert très foncé pour titres */
+  --teal: #018476;             /* Teal pour accents secondaires */
+  --bleu-pale: #e7f6fc;        /* Bleu très pâle (backgrounds) */
+  --blanc: #ffffff;            /* Blanc pur */
+  --gris-clair: #f5f9f5;       /* Gris très clair (fond global) */
+  --texte: #1a1a1a;            /* Couleur texte principal */
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* ===================================
+   RESET ET STYLES DE BASE
+   =================================== */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
 
 body { 
   font-family: 'Inter', sans-serif; 
@@ -28,22 +46,25 @@ body {
   line-height: 1.6;
 }
 
-/* HERO SECTION */
+/* ===================================
+   HERO SECTION (Bandeau d'en-tête)
+   Modifiez padding pour ajuster la hauteur
+   =================================== */
 .hero {
   width: 100%;
   background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%);
-  padding: 80px 32px 64px;
+  padding: 80px 32px 64px;  /* Ajustez ces valeurs pour changer la hauteur */
   text-align: center;
 }
 
 .hero-content {
-  max-width: 900px;
+  max-width: 900px;  /* Largeur maximale du contenu */
   margin: 0 auto;
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 3rem;  /* Taille du titre principal */
   font-weight: 700;
   color: var(--blanc);
   line-height: 1.2;
@@ -51,12 +72,13 @@ body {
 }
 
 .hero p {
-  font-size: 1.15rem;
+  font-size: 1.15rem;  /* Taille du sous-titre */
   color: var(--bleu-clair);
   margin-bottom: 40px;
   line-height: 1.7;
 }
 
+/* Conteneur des boutons CTA du hero */
 .hero-cta {
   display: flex;
   gap: 16px;
@@ -64,9 +86,13 @@ body {
   flex-wrap: wrap;
 }
 
+/* ===================================
+   BOUTONS (Call-to-Action)
+   Modifiez les couleurs et padding ici
+   =================================== */
 .btn {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 14px 32px;  /* Ajustez pour des boutons plus grands/petits */
   border-radius: 10px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -77,6 +103,7 @@ body {
   border: none;
 }
 
+/* Bouton principal (bleu clair) */
 .btn-primary {
   background: var(--bleu-clair);
   color: var(--vert-fonce);
@@ -84,9 +111,10 @@ body {
 
 .btn-primary:hover {
   background: var(--blanc);
-  transform: translateY(-2px);
+  transform: translateY(-2px);  /* Léger déplacement au hover */
 }
 
+/* Bouton secondaire (transparent avec bordure) */
 .btn-secondary {
   background: rgba(255,255,255,0.13);
   color: var(--blanc);
@@ -98,17 +126,21 @@ body {
   border-color: rgba(255,255,255,0.5);
 }
 
-/* MAIN CONTAINER */
+/* ===================================
+   CONTENEUR PRINCIPAL
+   =================================== */
 main {
-  max-width: 1200px;
+  max-width: 1200px;  /* Largeur maximale du contenu */
   margin: 0 auto;
-  padding: 60px 24px;
+  padding: 60px 24px;  /* Espacement vertical et horizontal */
 }
 
-/* SECTION TITLES */
+/* ===================================
+   TITRES DE SECTIONS
+   =================================== */
 .section-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 2rem;  /* Taille des titres de section */
   font-weight: 600;
   color: var(--vert-fonce);
   text-align: center;
@@ -125,7 +157,9 @@ main {
   margin-right: auto;
 }
 
-/* CREDIBILITY BAR */
+/* ===================================
+   BARRE DE CRÉDIBILITÉ (Certifications)
+   =================================== */
 .credibility {
   background: var(--blanc);
   border-radius: 16px;
@@ -137,7 +171,7 @@ main {
 
 .cred-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Grille responsive */
   gap: 32px;
   text-align: center;
 }
@@ -148,6 +182,7 @@ main {
   align-items: center;
 }
 
+/* Icônes circulaires de crédibilité */
 .cred-icon {
   width: 56px;
   height: 56px;
@@ -158,6 +193,7 @@ main {
   justify-content: center;
   font-size: 1.5rem;
   margin-bottom: 12px;
+  color: var(--teal);
 }
 
 .cred-label {
@@ -175,6 +211,7 @@ main {
   line-height: 1.4;
 }
 
+/* Badge "en cours" pour certifications */
 .badge-pending {
   display: inline-block;
   background: #fff3cd;
@@ -186,7 +223,10 @@ main {
   font-weight: 500;
 }
 
-/* CARDS GRID */
+/* ===================================
+   GRILLE DE CARDS (Services, etc.)
+   Ajustez minmax(280px) pour changer la largeur minimale des cards
+   =================================== */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -194,22 +234,28 @@ main {
   margin-bottom: 64px;
 }
 
+/* Style des cards individuelles */
 .card {
   background: var(--blanc);
   border-radius: 14px;
   padding: 32px;
   box-shadow: 0 2px 16px rgba(0,34,28,0.07);
-  border-top: 4px solid var(--vert-logo);
+  border-top: 4px solid var(--vert-logo);  /* Bordure colorée en haut */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Effet au survol des cards */
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px);  /* Léger déplacement vers le haut */
   box-shadow: 0 8px 24px rgba(0,34,28,0.12);
 }
 
-.card.teal-top { border-top-color: var(--teal); }
+/* Variante avec bordure teal */
+.card.teal-top { 
+  border-top-color: var(--teal); 
+}
 
+/* Icône de la card */
 .card-icon {
   width: 48px;
   height: 48px;
@@ -220,6 +266,7 @@ main {
   justify-content: center;
   font-size: 1.4rem;
   margin-bottom: 16px;
+  color: var(--vert-logo);
 }
 
 .card h3 {
@@ -237,6 +284,7 @@ main {
   margin-bottom: 16px;
 }
 
+/* Lien "En savoir plus" dans les cards */
 .card-link {
   color: var(--teal);
   font-weight: 600;
@@ -249,9 +297,10 @@ main {
 }
 
 .card-link:hover {
-  gap: 10px;
+  gap: 10px;  /* Écartement de la flèche au hover */
 }
 
+/* Badge de prix dans les cards */
 .card-price {
   display: inline-block;
   background: #e8f4e9;
@@ -263,7 +312,9 @@ main {
   margin-top: 8px;
 }
 
-/* TOOLS SECTION */
+/* ===================================
+   SECTION OUTILS (Calculateurs)
+   =================================== */
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -284,6 +335,7 @@ main {
   display: block;
 }
 
+/* Bordure gradient en haut des tool-cards */
 .tool-card::before {
   content: '';
   position: absolute;
@@ -301,6 +353,7 @@ main {
 .tool-icon {
   font-size: 2rem;
   margin-bottom: 12px;
+  color: var(--teal);
 }
 
 .tool-card h4 {
@@ -317,6 +370,7 @@ main {
   line-height: 1.5;
 }
 
+/* Badge "Bientôt disponible" */
 .badge-soon {
   display: inline-block;
   background: #fff3cd;
@@ -328,7 +382,9 @@ main {
   margin-top: 8px;
 }
 
-/* ABOUT SECTION */
+/* ===================================
+   SECTION À PROPOS
+   =================================== */
 .about-section {
   background: var(--blanc);
   border-radius: 16px;
@@ -336,7 +392,7 @@ main {
   margin-bottom: 64px;
   box-shadow: 0 2px 16px rgba(0,34,28,0.07);
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 300px;  /* Texte | Photo */
   gap: 48px;
   align-items: center;
 }
@@ -355,6 +411,7 @@ main {
   margin-bottom: 16px;
 }
 
+/* Liste des points forts "checkmark" */
 .about-highlights {
   display: flex;
   flex-direction: column;
@@ -378,6 +435,7 @@ main {
   justify-content: center;
   font-size: 0.9rem;
   flex-shrink: 0;
+  color: var(--vert-logo);
 }
 
 .highlight-text {
@@ -386,6 +444,7 @@ main {
   font-weight: 500;
 }
 
+/* Photo professionnelle */
 .about-image {
   border-radius: 12px;
   overflow: hidden;
@@ -399,9 +458,10 @@ main {
   display: block;
 }
 
+/* Responsive pour tablettes/mobiles */
 @media(max-width: 900px) {
   .about-section {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;  /* Une seule colonne */
     text-align: center;
   }
   .about-image {
@@ -413,79 +473,78 @@ main {
   }
 }
 
-/* TESTIMONIALS */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-bottom: 64px;
-}
-
-.testimonial-card {
+/* ===================================
+   SECTION TÉMOIGNAGES / GOOGLE REVIEWS
+   =================================== */
+.testimonials-section {
   background: var(--blanc);
-  border-radius: 14px;
-  padding: 32px;
+  border-radius: 16px;
+  padding: 48px;
+  margin-bottom: 64px;
   box-shadow: 0 2px 16px rgba(0,34,28,0.07);
-  position: relative;
+  text-align: center;
 }
 
-.quote-icon {
-  font-size: 3rem;
-  color: var(--gris-clair);
-  line-height: 1;
+.testimonials-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--vert-fonce);
   margin-bottom: 16px;
 }
 
-.testimonial-text {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  font-style: italic;
+.testimonials-section p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 32px;
 }
 
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.author-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--vert-logo), var(--teal));
+/* Conteneur des étoiles Google */
+.google-rating {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--blanc);
-  font-weight: 600;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stars {
+  color: #fbbf24;  /* Couleur or pour les étoiles */
+  font-size: 1.8rem;
+  letter-spacing: 4px;
+}
+
+.rating-text {
   font-size: 1.1rem;
-}
-
-.author-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.author-name {
-  font-weight: 600;
   color: var(--vert-fonce);
+  font-weight: 600;
+}
+
+/* Logo Google */
+.google-logo {
+  width: 120px;
+  margin: 0 auto 24px;
+}
+
+/* Texte d'instructions */
+.testimonials-cta {
   font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 24px;
 }
 
-.author-title {
-  font-size: 0.8rem;
-  color: #999;
-}
-
-/* CONTACT SECTION */
+/* ===================================
+   SECTION CONTACT (Gradient)
+   FIX : Centrage corrigé
+   =================================== */
 .contact-section {
   background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%);
   border-radius: 16px;
   padding: 56px 48px;
   margin-bottom: 64px;
   text-align: center;
+  display: flex;              /* FIX : Ajout flexbox */
+  flex-direction: column;     /* FIX : Direction colonne */
+  align-items: center;        /* FIX : Centrage horizontal */
 }
 
 .contact-section h2 {
@@ -495,18 +554,21 @@ main {
   margin-bottom: 16px;
 }
 
-.contact-section p {
+.contact-section > p {  /* FIX : Sélecteur plus spécifique */
   color: var(--bleu-clair);
   font-size: 1.05rem;
   margin-bottom: 32px;
+  max-width: 700px;  /* FIX : Limite de largeur pour le texte */
 }
 
+/* Grid des infos de contact */
 .contact-info {
   display: flex;
   justify-content: center;
   gap: 48px;
   flex-wrap: wrap;
   margin-bottom: 32px;
+  width: 100%;  /* FIX : Prend toute la largeur disponible */
 }
 
 .contact-item {
@@ -516,6 +578,7 @@ main {
   gap: 8px;
 }
 
+/* Icônes de contact circulaires */
 .contact-icon {
   width: 48px;
   height: 48px;
@@ -525,6 +588,7 @@ main {
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
+  color: var(--blanc);
 }
 
 .contact-label {
@@ -549,6 +613,7 @@ main {
   text-decoration: underline;
 }
 
+/* Liens de réseaux sociaux */
 .social-links {
   display: flex;
   justify-content: center;
@@ -576,7 +641,9 @@ main {
   transform: translateY(-3px);
 }
 
-/* FOOTER NOTE */
+/* ===================================
+   NOTE DE FOOTER (Mention MESH)
+   =================================== */
 .footer-note {
   text-align: center;
   padding: 32px 24px;
@@ -593,7 +660,9 @@ main {
   text-decoration: underline;
 }
 
-/* RESPONSIVE */
+/* ===================================
+   RESPONSIVE DESIGN (Mobile)
+   =================================== */
 @media(max-width: 768px) {
   .hero h1 { font-size: 2rem; }
   .hero p { font-size: 1rem; }
@@ -602,14 +671,19 @@ main {
   .tools-grid { grid-template-columns: 1fr; }
   .contact-info { gap: 24px; }
   .about-section { padding: 32px 24px; }
+  .contact-section { padding: 40px 24px; }  /* FIX : Padding mobile */
 }
 
-/* SMOOTH SCROLL */
+/* ===================================
+   SMOOTH SCROLL (Défilement fluide)
+   =================================== */
 html {
   scroll-behavior: smooth;
 }
 
-/* ANIMATIONS */
+/* ===================================
+   ANIMATIONS (Fade in au scroll)
+   =================================== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -628,13 +702,17 @@ html {
 </head>
 <body>
 
-<!-- HERO SECTION -->
+<!-- ===================================
+     HERO SECTION (Bandeau d'accueil)
+     =================================== -->
 <section class="hero">
   <div class="hero-content fade-in">
     <h1>Transformer vos ambitions en résultats concrets</h1>
     <p>Je transforme les tendances en stratégies concrètes pour sécuriser et faire croître votre patrimoine familial.</p>
     <div class="hero-cta">
+      <!-- Bouton principal : Prendre RDV -->
       <a href="https://api.leadconnectorhq.com/widget/booking/Ji600NehzD0aMO3Dl5A5?backgroundColor=%23ffffff&primaryColor=%234e7a51FF&buttonText=Prendre+Rendez-vous&showCalendarTitle=true&showCalendarDescription=true&showCalendarDetails=true&default=false" class="btn btn-primary" target="_blank">Prendre rendez-vous</a>
+      <!-- Bouton secondaire : Scroll vers services -->
       <a href="#services" class="btn btn-secondary">Découvrir mes services</a>
     </div>
   </div>
@@ -642,230 +720,262 @@ html {
 
 <main>
 
-  <!-- CREDIBILITY BAR -->
+  <!-- ===================================
+       BARRE DE CRÉDIBILITÉ (Certifications)
+       =================================== -->
   <section class="credibility fade-in">
     <div class="cred-grid">
+      <!-- Item 1 : Expérience -->
       <div class="cred-item">
-        <div class="cred-icon">📅</div>
+        <div class="cred-icon"><i class="fas fa-calendar-alt"></i></div>
         <div class="cred-label">Expérience</div>
         <div class="cred-value">Depuis 2019</div>
       </div>
+      <!-- Item 2 : Représentant de courtiers -->
       <div class="cred-item">
-        <div class="cred-icon">📊</div>
+        <div class="cred-icon"><i class="fas fa-chart-line"></i></div>
         <div class="cred-label">Certification</div>
         <div class="cred-value">Représentant de courtiers<br>(épargne collective)</div>
       </div>
+      <!-- Item 3 : Assurance de personnes -->
       <div class="cred-item">
-        <div class="cred-icon">🛡️</div>
+        <div class="cred-icon"><i class="fas fa-shield-alt"></i></div>
         <div class="cred-label">Certification</div>
         <div class="cred-value">Assurance de personnes</div>
       </div>
+      <!-- Item 4 : Planificateur financier (en cours) -->
       <div class="cred-item">
-        <div class="cred-icon">🎓</div>
+        <div class="cred-icon"><i class="fas fa-graduation-cap"></i></div>
         <div class="cred-label">En cours</div>
         <div class="cred-value">Planificateur financier<span class="badge-pending">d'ici 1 an</span></div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
+  <!-- ===================================
+       SECTION SERVICES
+       Modifiez les textes et liens ici
+       =================================== -->
   <section id="services">
     <h2 class="section-title">Services</h2>
     <p class="section-subtitle">Une approche complète pour bâtir et protéger votre patrimoine</p>
     
     <div class="cards-grid">
+      <!-- Service 1 : Gestion de placements -->
       <div class="card">
-        <div class="card-icon">📈</div>
+        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
         <h3>Gestion de placements</h3>
         <p>Stratégies personnalisées pour faire croître votre épargne en fonction de votre profil, vos objectifs et votre tolérance au risque.</p>
-        <a href="https://www.nicolasstoltz.com/placements" class="card-link">En savoir plus →</a>
+        <a href="https://www.nicolasstoltz.com/placements" class="card-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
       </div>
 
+      <!-- Service 2 : Planification financière -->
       <div class="card teal-top">
-        <div class="card-icon">🎯</div>
+        <div class="card-icon"><i class="fas fa-bullseye"></i></div>
         <h3>Planification financière</h3>
         <p>Planification de retraite, optimisation fiscale et gestion des flux monétaires pour sécuriser votre avenir familial.</p>
       </div>
 
+      <!-- Service 3 : Assurances de personnes -->
       <div class="card">
-        <div class="card-icon">🛡️</div>
+        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
         <h3>Assurances de personnes</h3>
         <p>Protection complète : assurance temporaire, permanente, maladies graves et invalidité selon vos besoins réels.</p>
       </div>
 
+      <!-- Service 4 : Coaching financier -->
       <div class="card teal-top">
-        <div class="card-icon">💡</div>
+        <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
         <h3>Coaching financier</h3>
         <p>Pour les investisseurs autonomes qui veulent garder le contrôle tout en bénéficiant d'une expertise professionnelle.</p>
         <span class="card-price">150 $ / consultation</span>
       </div>
 
+      <!-- Service 5 : Déclaration de revenus -->
       <div class="card">
-        <div class="card-icon">📋</div>
+        <div class="card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
         <h3>Déclaration de revenus</h3>
         <p>Accompagnement personnalisé pour la production de vos déclarations fédérale et provinciale — Particuliers & travailleurs autonomes · Québec</p>
       </div>
     </div>
   </section>
 
-  <!-- TOOLS SECTION -->
+  <!-- ===================================
+       SECTION OUTILS GRATUITS
+       Ajoutez/supprimez des tool-cards ici
+       =================================== -->
   <section id="outils">
     <h2 class="section-title">Outils gratuits</h2>
     <p class="section-subtitle">Calculateurs et ressources pour mieux comprendre vos finances</p>
     
     <div class="tools-grid">
+      <!-- Outil 1 : Intérêts composés -->
       <a href="https://www.nicolasstoltz.com/calculateur-intrets-composes" class="tool-card">
-        <div class="tool-icon">🧮</div>
+        <div class="tool-icon"><i class="fas fa-piggy-bank"></i></div>
         <h4>Calculateur d'intérêts composés</h4>
         <p>Projetez la croissance de vos investissements dans le temps</p>
       </a>
 
+      <!-- Outil 2 : Coût d'emprunt -->
       <a href="https://www.nicolasstoltz.com/calculatrice-emprunt" class="tool-card">
-        <div class="tool-icon">💰</div>
+        <div class="tool-icon"><i class="fas fa-money-bill-wave"></i></div>
         <h4>Calculateur de coût d'emprunt</h4>
         <p>Estimez le coût réel de vos emprunts et financements</p>
       </a>
 
+      <!-- Outil 3 : Table d'impôts -->
       <a href="https://www.nicolasstoltz.com/table-impots" class="tool-card">
-        <div class="tool-icon">📊</div>
+        <div class="tool-icon"><i class="fas fa-file-invoice"></i></div>
         <h4>Table d'impôts — Québec</h4>
         <p>Consultez les tranches d'imposition et taux effectifs</p>
       </a>
 
+      <!-- Outil 4 : Frais de service -->
       <a href="https://www.nicolasstoltz.com/honoraires" class="tool-card">
-        <div class="tool-icon">💎</div>
+        <div class="tool-icon"><i class="fas fa-gem"></i></div>
         <h4>Frais de service</h4>
         <p>Structure tarifaire transparente avec réductions progressives</p>
       </a>
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
+  <!-- ===================================
+       SECTION À PROPOS
+       Modifiez le texte et remplacez l'image
+       =================================== -->
   <section class="about-section">
     <div class="about-text">
       <h2>Une approche centrée sur vos objectifs</h2>
       <p>Depuis 2019, j'accompagne des familles et entrepreneurs dans la construction et la protection de leur patrimoine. Mon approche repose sur l'écoute, la transparence et l'adaptation aux tendances du marché.</p>
       <p>Je crois qu'une planification financière efficace doit être dynamique, évolutive et alignée avec vos véritables priorités de vie.</p>
       
+      <!-- Liste des avantages -->
       <div class="about-highlights">
         <div class="highlight-item">
-          <div class="highlight-icon">✓</div>
+          <div class="highlight-icon"><i class="fas fa-check"></i></div>
           <div class="highlight-text">Stratégies adaptées à votre profil unique</div>
         </div>
         <div class="highlight-item">
-          <div class="highlight-icon">✓</div>
+          <div class="highlight-icon"><i class="fas fa-check"></i></div>
           <div class="highlight-text">Transparence totale sur les honoraires</div>
         </div>
         <div class="highlight-item">
-          <div class="highlight-icon">✓</div>
+          <div class="highlight-icon"><i class="fas fa-check"></i></div>
           <div class="highlight-text">Suivi personnalisé et accessible</div>
         </div>
       </div>
     </div>
+    <!-- Photo professionnelle : Remplacez le chemin par votre URL -->
     <div class="about-image">
       <img src="nicolas-stoltz-photo.jpg" alt="Nicolas Stoltz, Conseiller en sécurité financière">
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section id="témoignages">
-    <h2 class="section-title">Ce que disent mes clients</h2>
-    <p class="section-subtitle">Témoignages authentiques de clients accompagnés</p>
+  <!-- ===================================
+       SECTION TÉMOIGNAGES / GOOGLE REVIEWS
+       Remplacez le lien href="#" par votre lien Google Reviews
+       =================================== -->
+  <section class="testimonials-section">
+    <h2>Ce que disent mes clients</h2>
+    <p>Découvrez les avis authentiques de clients accompagnés</p>
     
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="quote-icon">"</div>
-        <p class="testimonial-text">Nicolas a su comprendre mes objectifs et m'a proposé une stratégie claire et adaptée. Sa transparence sur les honoraires et son suivi régulier font toute la différence.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">C</div>
-          <div class="author-info">
-            <div class="author-name">Claire D.</div>
-            <div class="author-title">Cliente depuis 2022</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="quote-icon">"</div>
-        <p class="testimonial-text">En tant que travailleur autonome, j'avais besoin de quelqu'un qui comprenne mes enjeux fiscaux. L'approche de Nicolas est pragmatique et efficace.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">M</div>
-          <div class="author-info">
-            <div class="author-name">Marc L.</div>
-            <div class="author-title">Client depuis 2020</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="quote-icon">"</div>
-        <p class="testimonial-text">J'apprécie particulièrement les outils de calcul mis à disposition et la clarté des explications. C'est un conseiller qui prend le temps d'éduquer ses clients.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">J</div>
-          <div class="author-info">
-            <div class="author-name">Julie M.</div>
-            <div class="author-title">Cliente depuis 2021</div>
-          </div>
-        </div>
-      </div>
+    <!-- Affichage des étoiles Google (statique pour l'instant) -->
+    <div class="google-rating">
+      <div class="stars">★★★★★</div>
+      <div class="rating-text">5.0 / 5</div>
     </div>
+    
+    <!-- Logo Google (optionnel) -->
+    <!-- <img src="google-logo.png" alt="Google" class="google-logo"> -->
+    
+    <p class="testimonials-cta">Consultez mes avis clients vérifiés sur Google</p>
+    
+    <!-- Bouton vers Google Reviews : REMPLACEZ LE LIEN ICI -->
+    <a href="#" class="btn btn-primary" target="_blank">
+      <i class="fab fa-google"></i> Voir les avis Google
+    </a>
+    
+    <!-- Note : Une fois votre profil Google My Business configuré, 
+         remplacez le href="#" par votre lien Google Reviews -->
   </section>
 
-  <!-- CONTACT SECTION -->
+  <!-- ===================================
+       SECTION CONTACT (Gradient)
+       =================================== -->
   <section class="contact-section">
     <h2>Prêt à passer à l'action ?</h2>
     <p>Discutons de vos objectifs et voyons comment je peux vous accompagner</p>
     
+    <!-- Grid des informations de contact -->
     <div class="contact-info">
+      <!-- Email -->
       <div class="contact-item">
-        <div class="contact-icon">📧</div>
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
         <div class="contact-label">Email</div>
         <div class="contact-value"><a href="mailto:nstoltz@sentinelgroup.ca">nstoltz@sentinelgroup.ca</a></div>
       </div>
+      <!-- Téléphone -->
       <div class="contact-item">
-        <div class="contact-icon">📱</div>
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
         <div class="contact-label">Téléphone</div>
         <div class="contact-value"><a href="tel:5819966708">581-996-6708</a></div>
       </div>
+      <!-- Localisation -->
       <div class="contact-item">
-        <div class="contact-icon">📍</div>
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
         <div class="contact-label">Localisation</div>
         <div class="contact-value">Québec, QC</div>
       </div>
     </div>
 
+    <!-- Bouton CTA principal -->
     <a href="https://api.leadconnectorhq.com/widget/booking/Ji600NehzD0aMO3Dl5A5?backgroundColor=%23ffffff&primaryColor=%234e7a51FF&buttonText=Prendre+Rendez-vous&showCalendarTitle=true&showCalendarDescription=true&showCalendarDetails=true&default=false" class="btn btn-primary" target="_blank">Prendre rendez-vous</a>
 
+    <!-- Liens réseaux sociaux -->
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/nicolas-stoltz-4a5b92190/" target="_blank" class="social-link" title="LinkedIn">💼</a>
-      <a href="https://www.facebook.com/nstoltzfinances/" target="_blank" class="social-link" title="Facebook">📘</a>
-      <a href="https://www.instagram.com/nicolas.stoltz/" target="_blank" class="social-link" title="Instagram">📷</a>
+      <a href="https://www.linkedin.com/in/nicolas-stoltz-4a5b92190/" target="_blank" class="social-link" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.facebook.com/nstoltzfinances/" target="_blank" class="social-link" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/nicolas.stoltz/" target="_blank" class="social-link" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
     </div>
   </section>
 
 </main>
 
-<!-- FOOTER NOTE -->
+<!-- ===================================
+     FOOTER NOTE (Mention MESH Solutions)
+     =================================== -->
 <div class="footer-note">
   <p>Site propulsé par <a href="#" target="_blank">MESH Solutions</a></p>
 </div>
 
+<!-- ===================================
+     JAVASCRIPT (Interactions)
+     =================================== -->
 <script>
-// Smooth scroll pour les liens internes
+// Smooth scroll pour les liens internes (ancres)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Vérifie que le lien n'est pas juste "#"
+    if (this.getAttribute('href') !== '#') {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   });
 });
 
-// Animation on scroll (simple intersection observer)
+// Animation on scroll (Intersection Observer)
 const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
+  threshold: 0.1,  // Déclenche quand 10% de l'élément est visible
+  rootMargin: '0px 0px -50px 0px'  // Déclenche un peu avant que l'élément entre dans la vue
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -876,8 +986,8 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observer toutes les sections principales
-document.querySelectorAll('section, .card, .tool-card, .testimonial-card').forEach(el => {
+// Observer toutes les sections principales pour animation
+document.querySelectorAll('section, .card, .tool-card').forEach(el => {
   observer.observe(el);
 });
 </script>

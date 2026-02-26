@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicolas Stoltz | Services Financiers — Conseiller en sécurité financière, Québec</title>
+<meta name="description" content="Transformation de vos ambitions en résultats concrets. Planification financière, gestion de placements, assurances et coaching financier à Québec.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --vert-logo: #4e7a51;
+  --bleu-clair: #a5cfe3;
+  --vert-fonce: #00221c;
+  --teal: #018476;
+  --bleu-pale: #e7f6fc;
+  --blanc: #ffffff;
+  --gris-clair: #f5f9f5;
+  --texte: #1a1a1a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+  font-family: 'Inter', sans-serif; 
+  background-color: var(--gris-clair); 
+  color: var(--texte);
+  line-height: 1.6;
+}
+
+/* HERO SECTION */
+.hero {
+  width: 100%;
+  background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%);
+  padding: 80px 32px 64px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--blanc);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--bleu-clair);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--bleu-clair);
+  color: var(--vert-fonce);
+}
+
+.btn-primary:hover {
+  background: var(--blanc);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.13);
+  color: var(--blanc);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* MAIN CONTAINER */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+/* SECTION TITLES */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--vert-fonce);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 48px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CREDIBILITY BAR */
+.credibility {
+  background: var(--blanc);
+  border-radius: 16px;
+  padding: 32px 40px;
+  margin-bottom: 64px;
+  box-shadow: 0 2px 16px rgba(0,34,28,0.08);
+  border-top: 4px solid var(--vert-logo);
+}
+
+.cred-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  text-align: center;
+}
+
+.cred-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cred-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--gris-clair);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.cred-label {
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+}
+
+.cred-value {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--vert-fonce);
+  line-height: 1.4;
+}
+
+.badge-pending {
+  display: inline-block;
+  background: #fff3cd;
+  color: #856404;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+/* CARDS GRID */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.card {
+  background: var(--blanc);
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 2px 16px rgba(0,34,28,0.07);
+  border-top: 4px solid var(--vert-logo);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,34,28,0.12);
+}
+
+.card.teal-top { border-top-color: var(--teal); }
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--gris-clair);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--vert-fonce);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.card-link {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.3s ease;
+}
+
+.card-link:hover {
+  gap: 10px;
+}
+
+.card-price {
+  display: inline-block;
+  background: #e8f4e9;
+  color: var(--vert-logo);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+/* TOOLS SECTION */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+.tool-card {
+  background: var(--blanc);
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 16px rgba(0,34,28,0.07);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.tool-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--vert-logo), var(--teal));
+}
+
+.tool-card:hover {
+  transform: translateY(-3px);
+}
+
+.tool-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.tool-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--vert-fonce);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.tool-card p {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.badge-soon {
+  display: inline-block;
+  background: #fff3cd;
+  color: #856404;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  background: var(--blanc);
+  border-radius: 16px;
+  padding: 48px;
+  margin-bottom: 64px;
+  box-shadow: 0 2px 16px rgba(0,34,28,0.07);
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--vert-fonce);
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.highlight-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--gris-clair);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.highlight-text {
+  font-size: 0.95rem;
+  color: var(--vert-fonce);
+  font-weight: 500;
+}
+
+.about-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,34,28,0.15);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media(max-width: 900px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-image {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .about-highlights {
+    align-items: center;
+  }
+}
+
+/* TESTIMONIALS */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.testimonial-card {
+  background: var(--blanc);
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 2px 16px rgba(0,34,28,0.07);
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 3rem;
+  color: var(--gris-clair);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--vert-logo), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanc);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-weight: 600;
+  color: var(--vert-fonce);
+  font-size: 0.95rem;
+}
+
+.author-title {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%);
+  border-radius: 16px;
+  padding: 56px 48px;
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--blanc);
+  margin-bottom: 16px;
+}
+
+.contact-section p {
+  color: var(--bleu-clair);
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  color: var(--bleu-clair);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.contact-value {
+  color: var(--blanc);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.contact-value a {
+  color: var(--blanc);
+  text-decoration: none;
+}
+
+.contact-value a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.social-link {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanc);
+  font-size: 1.3rem;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-3px);
+}
+
+/* FOOTER NOTE */
+.footer-note {
+  text-align: center;
+  padding: 32px 24px;
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.footer-note a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.footer-note a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  .section-title { font-size: 1.6rem; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .tools-grid { grid-template-columns: 1fr; }
+  .contact-info { gap: 24px; }
+  .about-section { padding: 32px 24px; }
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease-out;
+}
+</style>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content fade-in">
+    <h1>Transformer vos ambitions en résultats concrets</h1>
+    <p>Je transforme les tendances en stratégies concrètes pour sécuriser et faire croître votre patrimoine familial.</p>
+    <div class="hero-cta">
+      <a href="https://api.leadconnectorhq.com/widget/booking/Ji600NehzD0aMO3Dl5A5?backgroundColor=%23ffffff&primaryColor=%234e7a51FF&buttonText=Prendre+Rendez-vous&showCalendarTitle=true&showCalendarDescription=true&showCalendarDetails=true&default=false" class="btn btn-primary" target="_blank">Prendre rendez-vous</a>
+      <a href="#services" class="btn btn-secondary">Découvrir mes services</a>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <!-- CREDIBILITY BAR -->
+  <section class="credibility fade-in">
+    <div class="cred-grid">
+      <div class="cred-item">
+        <div class="cred-icon">📅</div>
+        <div class="cred-label">Expérience</div>
+        <div class="cred-value">Depuis 2019</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">📊</div>
+        <div class="cred-label">Certification</div>
+        <div class="cred-value">Représentant de courtiers<br>(épargne collective)</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">🛡️</div>
+        <div class="cred-label">Certification</div>
+        <div class="cred-value">Assurance de personnes</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">🎓</div>
+        <div class="cred-label">En cours</div>
+        <div class="cred-value">Planificateur financier<span class="badge-pending">d'ici 1 an</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services">
+    <h2 class="section-title">Services</h2>
+    <p class="section-subtitle">Une approche complète pour bâtir et protéger votre patrimoine</p>
+    
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <h3>Gestion de placements</h3>
+        <p>Stratégies personnalisées pour faire croître votre épargne en fonction de votre profil, vos objectifs et votre tolérance au risque.</p>
+        <a href="https://www.nicolasstoltz.com/placements" class="card-link">En savoir plus →</a>
+      </div>
+
+      <div class="card teal-top">
+        <div class="card-icon">🎯</div>
+        <h3>Planification financière</h3>
+        <p>Planification de retraite, optimisation fiscale et gestion des flux monétaires pour sécuriser votre avenir familial.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3>Assurances de personnes</h3>
+        <p>Protection complète : assurance temporaire, permanente, maladies graves et invalidité selon vos besoins réels.</p>
+      </div>
+
+      <div class="card teal-top">
+        <div class="card-icon">💡</div>
+        <h3>Coaching financier</h3>
+        <p>Pour les investisseurs autonomes qui veulent garder le contrôle tout en bénéficiant d'une expertise professionnelle.</p>
+        <span class="card-price">150 $ / consultation</span>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>Déclaration de revenus</h3>
+        <p>Accompagnement personnalisé pour la production de vos déclarations fédérale et provinciale — Particuliers & travailleurs autonomes · Québec</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS SECTION -->
+  <section id="outils">
+    <h2 class="section-title">Outils gratuits</h2>
+    <p class="section-subtitle">Calculateurs et ressources pour mieux comprendre vos finances</p>
+    
+    <div class="tools-grid">
+      <a href="https://www.nicolasstoltz.com/calculateur-intrets-composes" class="tool-card">
+        <div class="tool-icon">🧮</div>
+        <h4>Calculateur d'intérêts composés</h4>
+        <p>Projetez la croissance de vos investissements dans le temps</p>
+      </a>
+
+      <a href="https://www.nicolasstoltz.com/calculatrice-emprunt" class="tool-card">
+        <div class="tool-icon">💰</div>
+        <h4>Calculateur de coût d'emprunt</h4>
+        <p>Estimez le coût réel de vos emprunts et financements</p>
+      </a>
+
+      <a href="https://www.nicolasstoltz.com/table-impots" class="tool-card">
+        <div class="tool-icon">📊</div>
+        <h4>Table d'impôts — Québec</h4>
+        <p>Consultez les tranches d'imposition et taux effectifs</p>
+      </a>
+
+      <a href="https://www.nicolasstoltz.com/honoraires" class="tool-card">
+        <div class="tool-icon">💎</div>
+        <h4>Frais de service</h4>
+        <p>Structure tarifaire transparente avec réductions progressives</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2>Une approche centrée sur vos objectifs</h2>
+      <p>Depuis 2019, j'accompagne des familles et entrepreneurs dans la construction et la protection de leur patrimoine. Mon approche repose sur l'écoute, la transparence et l'adaptation aux tendances du marché.</p>
+      <p>Je crois qu'une planification financière efficace doit être dynamique, évolutive et alignée avec vos véritables priorités de vie.</p>
+      
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">✓</div>
+          <div class="highlight-text">Stratégies adaptées à votre profil unique</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">✓</div>
+          <div class="highlight-text">Transparence totale sur les honoraires</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">✓</div>
+          <div class="highlight-text">Suivi personnalisé et accessible</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-image">
+      <img src="nicolas-stoltz-photo.jpg" alt="Nicolas Stoltz, Conseiller en sécurité financière">
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="témoignages">
+    <h2 class="section-title">Ce que disent mes clients</h2>
+    <p class="section-subtitle">Témoignages authentiques de clients accompagnés</p>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">Nicolas a su comprendre mes objectifs et m'a proposé une stratégie claire et adaptée. Sa transparence sur les honoraires et son suivi régulier font toute la différence.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">C</div>
+          <div class="author-info">
+            <div class="author-name">Claire D.</div>
+            <div class="author-title">Cliente depuis 2022</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">En tant que travailleur autonome, j'avais besoin de quelqu'un qui comprenne mes enjeux fiscaux. L'approche de Nicolas est pragmatique et efficace.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">M</div>
+          <div class="author-info">
+            <div class="author-name">Marc L.</div>
+            <div class="author-title">Client depuis 2020</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">J'apprécie particulièrement les outils de calcul mis à disposition et la clarté des explications. C'est un conseiller qui prend le temps d'éduquer ses clients.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">J</div>
+          <div class="author-info">
+            <div class="author-name">Julie M.</div>
+            <div class="author-title">Cliente depuis 2021</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h2>Prêt à passer à l'action ?</h2>
+    <p>Discutons de vos objectifs et voyons comment je peux vous accompagner</p>
+    
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value"><a href="mailto:nstoltz@sentinelgroup.ca">nstoltz@sentinelgroup.ca</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📱</div>
+        <div class="contact-label">Téléphone</div>
+        <div class="contact-value"><a href="tel:5819966708">581-996-6708</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-label">Localisation</div>
+        <div class="contact-value">Québec, QC</div>
+      </div>
+    </div>
+
+    <a href="https://api.leadconnectorhq.com/widget/booking/Ji600NehzD0aMO3Dl5A5?backgroundColor=%23ffffff&primaryColor=%234e7a51FF&buttonText=Prendre+Rendez-vous&showCalendarTitle=true&showCalendarDescription=true&showCalendarDetails=true&default=false" class="btn btn-primary" target="_blank">Prendre rendez-vous</a>
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/nicolas-stoltz-4a5b92190/" target="_blank" class="social-link" title="LinkedIn">💼</a>
+      <a href="https://www.facebook.com/nstoltzfinances/" target="_blank" class="social-link" title="Facebook">📘</a>
+      <a href="https://www.instagram.com/nicolas.stoltz/" target="_blank" class="social-link" title="Instagram">📷</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER NOTE -->
+<div class="footer-note">
+  <p>Site propulsé par <a href="#" target="_blank">MESH Solutions</a></p>
+</div>
+
+<script>
+// Smooth scroll pour les liens internes
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Animation on scroll (simple intersection observer)
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    }
+  });
+}, observerOptions);
+
+// Observer toutes les sections principales
+document.querySelectorAll('section, .card, .tool-card, .testimonial-card').forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>

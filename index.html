@@ -433,7 +433,7 @@ main {
 }
 
 /* ===================================
-   PARTENAIRES CARROUSEL (NOUVEAU)
+   PARTENAIRES CARROUSEL
    =================================== */
 .partners-section {
   background: var(--blanc);
@@ -452,7 +452,6 @@ main {
   margin-bottom: 48px;
 }
 
-/* Conteneur du carrousel */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -460,7 +459,6 @@ main {
   padding: 20px 0;
 }
 
-/* Track du carrousel (contient tous les logos) */
 .carousel-track {
   display: flex;
   gap: 60px;
@@ -468,12 +466,10 @@ main {
   width: fit-content;
 }
 
-/* Pause l'animation au hover */
 .carousel-container:hover .carousel-track {
   animation-play-state: paused;
 }
 
-/* Item du carrousel (chaque logo) */
 .carousel-item {
   flex-shrink: 0;
   width: 180px;
@@ -498,7 +494,6 @@ main {
   object-fit: contain;
 }
 
-/* Animation de défilement infini */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -557,6 +552,46 @@ main {
   font-size: 0.95rem;
   color: #666;
   margin-bottom: 24px;
+}
+
+/* ===================================
+   INFOLETTRE (NOUVEAU)
+   =================================== */
+.newsletter-section {
+  background: var(--blanc);
+  border-radius: 16px;
+  padding: 48px;
+  margin-bottom: 64px;
+  box-shadow: 0 2px 16px rgba(0,34,28,0.07);
+  border-top: 4px solid var(--teal);
+}
+
+.newsletter-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.newsletter-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--vert-fonce);
+  margin-bottom: 16px;
+}
+
+.newsletter-header p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.newsletter-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,34,28,0.08);
 }
 
 /* ===================================
@@ -806,6 +841,7 @@ main {
   }
   .about-section { padding: 32px 24px; }
   .contact-section { padding: 40px 24px; }
+  .newsletter-section { padding: 32px 24px; }
   .modal-content {
     width: 95%;
     max-height: 95vh;
@@ -1024,7 +1060,7 @@ html {
     </div>
   </section>
 
-  <!-- PARTENAIRES CARROUSEL (NOUVEAU) -->
+  <!-- PARTENAIRES CARROUSEL -->
   <section class="partners-section">
     <h2>Mes partenaires</h2>
     <div class="carousel-container">
@@ -1073,6 +1109,33 @@ html {
     <a href="#" class="btn btn-primary" target="_blank">
       <i class="fab fa-google"></i> Voir les avis Google
     </a>
+  </section>
+
+  <!-- INFOLETTRE (NOUVEAU) -->
+  <section class="newsletter-section">
+    <div class="newsletter-header">
+      <h2>Restez informé</h2>
+      <p>Chaque semaine, recevez un condensé de l'actualité économique et des conseils pratiques pour optimiser vos finances personnelles.</p>
+    </div>
+    <div class="newsletter-form-container">
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/lukuqxjwoKowYqsh773U"
+        style="width:100%;height:551px;border:none;border-radius:18px"
+        id="inline-lukuqxjwoKowYqsh773U" 
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Infolettre Form"
+        data-height="551"
+        data-layout-iframe-id="inline-lukuqxjwoKowYqsh773U"
+        data-form-id="lukuqxjwoKowYqsh773U"
+        title="Infolettre Form"
+      ></iframe>
+    </div>
   </section>
 
   <!-- CONTACT -->

@@ -236,10 +236,9 @@ main {
   color: inherit;
   display: block;
   text-decoration: none;
-  /* Pas de cursor: pointer, pas d'action au clic */
 }
 
-/* Hover visuel uniquement si la card a un card-link ou onclick */
+/* Hover uniquement pour les cards cliquables */
 .card.clickable:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,34,28,0.12);
@@ -278,7 +277,7 @@ main {
   margin-bottom: 16px;
 }
 
-/* Seul le card-link est interactif */
+/* Seul le card-link est interactif dans les cards non cliquables */
 .card-link {
   color: var(--teal);
   font-weight: 600;
@@ -502,12 +501,8 @@ main {
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ===================================
@@ -709,94 +704,25 @@ main {
 }
 
 /* ===================================
-   MODALE — centrage robuste via transform
+   ANIMATIONS
    =================================== */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 34, 28, 0.85);
-  z-index: 9999;
-  overflow-y: auto;
+html {
+  scroll-behavior: smooth;
 }
 
-.modal-overlay.active {
-  display: block;
-}
-
-.modal-content {
-  background: var(--blanc);
-  border-radius: 16px;
-  width: 90%;
-  max-width: 600px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 8px 32px rgba(0,34,28,0.3);
-  border-top: 4px solid var(--vert-logo);
-  animation: slideUp 0.3s ease;
-  overflow: hidden;
-}
-
-.modal-header {
-  padding: 24px 24px 16px;
-  border-bottom: 1px solid var(--gris-clair);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.modal-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  color: var(--vert-fonce);
-  font-weight: 600;
-}
-
-.modal-close {
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: #999;
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.modal-close:hover {
-  background: var(--gris-clair);
-  color: var(--vert-fonce);
-}
-
-.modal-body {
-  padding: 0;
-  height: 685px;
-  overflow-y: auto;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translate(-50%, calc(-50% + 30px));
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translateY(0);
   }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease-out;
 }
 
 /* ===================================
@@ -829,14 +755,6 @@ main {
   .about-section { padding: 32px 24px; }
   .contact-section { padding: 40px 24px; }
   .newsletter-section { padding: 32px 24px; }
-  .modal-content {
-    width: 95%;
-    top: 5%;
-    transform: translate(-50%, 0);
-  }
-  .modal-body {
-    height: 600px;
-  }
   .carousel-item {
     width: 140px;
     height: 80px;
@@ -844,28 +762,6 @@ main {
   .carousel-track {
     gap: 40px;
   }
-}
-
-/* ===================================
-   ANIMATIONS
-   =================================== */
-html {
-  scroll-behavior: smooth;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeInUp 0.8s ease-out;
 }
 </style>
 </head>
@@ -917,7 +813,6 @@ html {
     <p class="section-subtitle">Une approche complète pour bâtir et protéger votre patrimoine</p>
     
     <div class="cards-grid">
-      <!-- Card sans lien = pas de hover cliquable -->
       <div class="card">
         <div class="card-icon"><i class="fas fa-chart-line"></i></div>
         <h3>Gestion de placements</h3>
@@ -955,41 +850,40 @@ html {
   </section>
 
   <!-- SERVICES COMPLÉMENTAIRES -->
-  <!-- Ces cards sont cliquables (ouvrent la modale) donc gardent la classe clickable -->
   <section id="services-complementaires">
     <h2 class="section-title">Services complémentaires</h2>
     <p class="section-subtitle">Solutions partenaires pour protéger et optimiser votre patrimoine</p>
     
     <div class="cards-grid">
-      <div class="card teal-top clickable" onclick="openModal()">
+      <div class="card teal-top clickable" onclick="openGHLPopup()">
         <div class="card-icon"><i class="fas fa-home"></i></div>
         <h3>Courtier immobilier</h3>
         <p>Accompagnement expert pour l'achat ou la vente de votre propriété avec les meilleurs conseillers du marché.</p>
         <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
       </div>
 
-      <div class="card teal-top clickable" onclick="openModal()">
+      <div class="card teal-top clickable" onclick="openGHLPopup()">
         <div class="card-icon"><i class="fas fa-house-user"></i></div>
         <h3>Hypothèque</h3>
         <p>Financement immobilier optimal adapté à votre situation et vos objectifs patrimoniaux.</p>
         <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
       </div>
 
-      <div class="card teal-top clickable" onclick="openModal()">
+      <div class="card teal-top clickable" onclick="openGHLPopup()">
         <div class="card-icon"><i class="fas fa-car"></i></div>
         <h3>Assurance dommage</h3>
         <p>Protection complète pour votre véhicule et votre habitation avec les meilleures garanties.</p>
         <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
       </div>
 
-      <div class="card teal-top clickable" onclick="openModal()">
+      <div class="card teal-top clickable" onclick="openGHLPopup()">
         <div class="card-icon"><i class="fas fa-plane"></i></div>
         <h3>Assurance voyage</h3>
         <p>Couverture optimale pour vos déplacements personnels et professionnels à l'international.</p>
         <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
       </div>
 
-      <div class="card teal-top clickable" onclick="openModal()">
+      <div class="card teal-top clickable" onclick="openGHLPopup()">
         <div class="card-icon"><i class="fas fa-building"></i></div>
         <h3>Assurance collective</h3>
         <p>Solutions d'assurance complètes pour entreprises et régimes collectifs d'employés.</p>
@@ -1062,7 +956,6 @@ html {
     <h2>Mes partenaires</h2>
     <div class="carousel-container">
       <div class="carousel-track">
-        <!-- Premier set de logos -->
         <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d32ccd232a317a21cb916.png" alt="Partenaire"></div>
         <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d32a8d232a31ae91cb733.png" alt="Partenaire"></div>
         <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d325b1284286d72c7837b.png" alt="Partenaire"></div>
@@ -1074,7 +967,6 @@ html {
         <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503c305cc84732d0fc28d4.png" alt="Partenaire"></div>
         <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503c305cc8471ea8fc28d5.png" alt="Partenaire"></div>
         <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/68503c304a13d59d04243713.png" alt="Partenaire"></div>
-        
         <!-- Duplication pour boucle infinie -->
         <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d32ccd232a317a21cb916.png" alt="Partenaire"></div>
         <div class="carousel-item"><img src="https://storage.googleapis.com/msgsndr/yXR4W1RlW4PLwXeWvNCc/media/689d32a8d232a31ae91cb733.png" alt="Partenaire"></div>
@@ -1177,63 +1069,51 @@ html {
 
 </main>
 
-<!-- MODALE -->
-<div class="modal-overlay" id="contactModal" onclick="closeModalOnOverlay(event)">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 class="modal-title">Demande de service</h3>
-      <button class="modal-close" onclick="closeModal()">&times;</button>
-    </div>
-    <div class="modal-body">
-      <iframe
-        src="https://api.leadconnectorhq.com/widget/form/PlOikC6JPA7gzdAQJkC6"
-        style="width:100%;height:100%;border:none;"
-        id="inline-PlOikC6JPA7gzdAQJkC6" 
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="Demande de contact"
-        data-height="685"
-        data-layout-iframe-id="inline-PlOikC6JPA7gzdAQJkC6"
-        data-form-id="PlOikC6JPA7gzdAQJkC6"
-        title="Demande de contact"
-      ></iframe>
-    </div>
-  </div>
-</div>
-
-<!-- SCRIPTS -->
+<!-- 
+  POPUP GHL — Formulaire "Demande de contact"
+  L'iframe est cachée (display:none). Le script GHL gère
+  son propre overlay natif via data-layout POPUP.
+  On déclenche le popup en postant un message à l'iframe
+  ou en appelant window.LeadConnector.openForm().
+-->
+<iframe
+  src="https://api.leadconnectorhq.com/widget/form/PlOikC6JPA7gzdAQJkC6"
+  style="display:none;width:100%;height:100%;border:none;border-radius:18px"
+  id="popup-PlOikC6JPA7gzdAQJkC6" 
+  data-layout="{'id':'POPUP'}"
+  data-trigger-type="alwaysShow"
+  data-trigger-value=""
+  data-activation-type="alwaysActivated"
+  data-activation-value=""
+  data-deactivation-type="neverDeactivate"
+  data-deactivation-value=""
+  data-form-name="Demande de contact"
+  data-height="577"
+  data-layout-iframe-id="popup-PlOikC6JPA7gzdAQJkC6"
+  data-form-id="PlOikC6JPA7gzdAQJkC6"
+  title="Demande de contact"
+></iframe>
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
+<!-- SCRIPTS -->
 <script>
-// MODALE
-function openModal() {
-  const overlay = document.getElementById('contactModal');
-  overlay.classList.add('active');
-  document.body.style.overflow = 'hidden';
-  overlay.scrollTop = 0;
-}
-
-function closeModal() {
-  document.getElementById('contactModal').classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-function closeModalOnOverlay(event) {
-  if (event.target.id === 'contactModal') {
-    closeModal();
+// Déclenche le popup natif GHL
+function openGHLPopup() {
+  // Méthode 1 : via l'API LeadConnector si disponible
+  if (window.LeadConnector && window.LeadConnector.openForm) {
+    window.LeadConnector.openForm('PlOikC6JPA7gzdAQJkC6');
+    return;
+  }
+  // Méthode 2 : simule le trigger en rendant l'iframe visible
+  // puis poste un message pour forcer l'ouverture du popup GHL
+  const iframe = document.getElementById('popup-PlOikC6JPA7gzdAQJkC6');
+  if (iframe) {
+    iframe.style.display = 'block';
+    iframe.contentWindow.postMessage({ type: 'open-popup' }, '*');
+    // Remet caché après déclenchement
+    setTimeout(() => { iframe.style.display = 'none'; }, 500);
   }
 }
-
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') {
-    closeModal();
-  }
-});
 
 // SMOOTH SCROLL (anchors internes seulement)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -534,7 +534,7 @@ main {
 
 /* ===================================
    SECTION CONTACT (Gradient)
-   FIX : Centrage corrigé
+   FIX FINAL : Centrage parfait de tous les éléments
    =================================== */
 .contact-section {
   background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%);
@@ -542,9 +542,9 @@ main {
   padding: 56px 48px;
   margin-bottom: 64px;
   text-align: center;
-  display: flex;              /* FIX : Ajout flexbox */
-  flex-direction: column;     /* FIX : Direction colonne */
-  align-items: center;        /* FIX : Centrage horizontal */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-section h2 {
@@ -554,11 +554,11 @@ main {
   margin-bottom: 16px;
 }
 
-.contact-section > p {  /* FIX : Sélecteur plus spécifique */
+.contact-section > p {
   color: var(--bleu-clair);
   font-size: 1.05rem;
   margin-bottom: 32px;
-  max-width: 700px;  /* FIX : Limite de largeur pour le texte */
+  max-width: 700px;
 }
 
 /* Grid des infos de contact */
@@ -568,7 +568,7 @@ main {
   gap: 48px;
   flex-wrap: wrap;
   margin-bottom: 32px;
-  width: 100%;  /* FIX : Prend toute la largeur disponible */
+  width: 100%;
 }
 
 .contact-item {
@@ -591,17 +591,21 @@ main {
   color: var(--blanc);
 }
 
+/* FIX FINAL : Centrage des labels EMAIL / TÉLÉPHONE / LOCALISATION */
 .contact-label {
   font-size: 0.75rem;
   color: var(--bleu-clair);
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  text-align: center;  /* FIX : Ajout du centrage */
+  width: 100%;         /* FIX : Prend toute la largeur du parent */
 }
 
 .contact-value {
   color: var(--blanc);
   font-weight: 600;
   font-size: 0.95rem;
+  text-align: center;  /* FIX : Centrage aussi pour les valeurs */
 }
 
 .contact-value a {
@@ -671,7 +675,7 @@ main {
   .tools-grid { grid-template-columns: 1fr; }
   .contact-info { gap: 24px; }
   .about-section { padding: 32px 24px; }
-  .contact-section { padding: 40px 24px; }  /* FIX : Padding mobile */
+  .contact-section { padding: 40px 24px; }
 }
 
 /* ===================================

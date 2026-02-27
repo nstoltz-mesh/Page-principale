@@ -283,9 +283,10 @@ main { max-width: 1200px; margin: 0 auto; padding: 60px 24px; }
   inset: 0;
   background: rgba(0, 34, 28, 0.82);
   z-index: 9999;
-  align-items: center;       /* centré verticalement */
+  align-items: center;
   justify-content: center;
   padding: 16px;
+  padding-top: 80px;  /* crée l'espace avec le header */
   overflow-y: auto;
 }
 .modal-overlay.active {
@@ -302,7 +303,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 60px 24px; }
   border-top: 4px solid var(--vert-logo);
   animation: slideUp 0.3s ease;
   overflow: hidden;
-  max-height: calc(100vh - 32px);
+  max-height: calc(100vh - 96px);  /* ajusté pour le padding-top */
   display: flex;
   flex-direction: column;
 }
@@ -373,8 +374,8 @@ html { scroll-behavior: smooth; }
   .about-section { padding: 32px 24px; }
   .contact-section { padding: 40px 24px; }
   .newsletter-section { padding: 32px 24px; }
-  .modal-overlay { padding: 12px; }
-  .modal-content { max-width: 100%; }
+  .modal-overlay { padding: 12px; padding-top: 40px; }
+  .modal-content { max-width: 100%; max-height: calc(100vh - 52px); }
   .modal-body iframe { height: 480px; }
   .carousel-item { width: 140px; height: 80px; }
   .carousel-track { gap: 40px; }

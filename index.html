@@ -286,7 +286,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 60px 24px; }
   align-items: center;
   justify-content: center;
   padding: 16px;
-  padding-top: 80px;  /* crée l'espace avec le header */
+  padding-top: 80px;
   overflow-y: auto;
 }
 .modal-overlay.active {
@@ -303,7 +303,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 60px 24px; }
   border-top: 4px solid var(--vert-logo);
   animation: slideUp 0.3s ease;
   overflow: hidden;
-  max-height: calc(100vh - 96px);  /* ajusté pour le padding-top */
+  max-height: calc(100vh - 96px);
   display: flex;
   flex-direction: column;
 }
@@ -384,7 +384,7 @@ html { scroll-behavior: smooth; }
 </head>
 <body>
 
-<!-- HERO -->
+<!-- 1. HERO -->
 <section class="hero">
   <div class="hero-content fade-in">
     <h1>Transformer vos ambitions en résultats concrets</h1>
@@ -398,7 +398,33 @@ html { scroll-behavior: smooth; }
 
 <main>
 
-  <!-- CRÉDIBILITÉ -->
+  <!-- 2. À PROPOS -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2>Une approche centrée sur vos objectifs</h2>
+      <p>Depuis 2019, j'accompagne des familles et entrepreneurs dans la construction et la protection de leur patrimoine. Mon approche repose sur l'écoute, la transparence et l'adaptation aux tendances du marché.</p>
+      <p>Je crois qu'une planification financière efficace doit être dynamique, évolutive et alignée avec vos véritables priorités de vie.</p>
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon"><i class="fas fa-check"></i></div>
+          <div class="highlight-text">Stratégies adaptées à votre profil unique</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon"><i class="fas fa-check"></i></div>
+          <div class="highlight-text">Transparence totale sur les honoraires</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon"><i class="fas fa-check"></i></div>
+          <div class="highlight-text">Suivi personnalisé et accessible</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-image">
+      <img src="https://assets.cdn.filesafe.space/yXR4W1RlW4PLwXeWvNCc/media/69a06abee545dd8284dd8c8e.png" alt="Nicolas Stoltz, Conseiller en sécurité financière">
+    </div>
+  </section>
+
+  <!-- 3. CRÉDIBILITÉ -->
   <section class="credibility fade-in">
     <div class="cred-grid">
       <div class="cred-item">
@@ -424,7 +450,21 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <!-- SERVICES PRINCIPAUX -->
+  <!-- 4. TÉMOIGNAGES -->
+  <section class="testimonials-section">
+    <h2>Ce que disent mes clients</h2>
+    <p>Découvrez les avis authentiques de clients accompagnés</p>
+    <div class="google-rating">
+      <div class="stars">★★★★★</div>
+      <div class="rating-text">5.0 / 5</div>
+    </div>
+    <p class="testimonials-cta">Consultez mes avis clients vérifiés sur Google</p>
+    <a href="#" class="btn btn-primary" target="_blank">
+      <i class="fab fa-google"></i> Voir les avis Google
+    </a>
+  </section>
+
+  <!-- 5. SERVICES PRINCIPAUX -->
   <section id="services">
     <h2 class="section-title">Services</h2>
     <p class="section-subtitle">Une approche complète pour bâtir et protéger votre patrimoine</p>
@@ -461,7 +501,7 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <!-- SERVICES COMPLÉMENTAIRES -->
+  <!-- 6. SERVICES COMPLÉMENTAIRES -->
   <section id="services-complementaires">
     <h2 class="section-title">Services complémentaires</h2>
     <p class="section-subtitle">Solutions partenaires pour protéger et optimiser votre patrimoine</p>
@@ -499,7 +539,7 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <!-- OUTILS GRATUITS -->
+  <!-- 7. OUTILS GRATUITS -->
   <section id="outils">
     <h2 class="section-title">Outils gratuits</h2>
     <p class="section-subtitle">Calculateurs et ressources pour mieux comprendre vos finances</p>
@@ -527,33 +567,7 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <!-- À PROPOS -->
-  <section class="about-section">
-    <div class="about-text">
-      <h2>Une approche centrée sur vos objectifs</h2>
-      <p>Depuis 2019, j'accompagne des familles et entrepreneurs dans la construction et la protection de leur patrimoine. Mon approche repose sur l'écoute, la transparence et l'adaptation aux tendances du marché.</p>
-      <p>Je crois qu'une planification financière efficace doit être dynamique, évolutive et alignée avec vos véritables priorités de vie.</p>
-      <div class="about-highlights">
-        <div class="highlight-item">
-          <div class="highlight-icon"><i class="fas fa-check"></i></div>
-          <div class="highlight-text">Stratégies adaptées à votre profil unique</div>
-        </div>
-        <div class="highlight-item">
-          <div class="highlight-icon"><i class="fas fa-check"></i></div>
-          <div class="highlight-text">Transparence totale sur les honoraires</div>
-        </div>
-        <div class="highlight-item">
-          <div class="highlight-icon"><i class="fas fa-check"></i></div>
-          <div class="highlight-text">Suivi personnalisé et accessible</div>
-        </div>
-      </div>
-    </div>
-    <div class="about-image">
-      <img src="https://assets.cdn.filesafe.space/yXR4W1RlW4PLwXeWvNCc/media/69a06abee545dd8284dd8c8e.png" alt="Nicolas Stoltz, Conseiller en sécurité financière">
-    </div>
-  </section>
-
-  <!-- PARTENAIRES -->
+  <!-- 8. PARTENAIRES -->
   <section class="partners-section">
     <h2>Mes partenaires</h2>
     <div class="carousel-container">
@@ -584,21 +598,7 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <!-- TÉMOIGNAGES -->
-  <section class="testimonials-section">
-    <h2>Ce que disent mes clients</h2>
-    <p>Découvrez les avis authentiques de clients accompagnés</p>
-    <div class="google-rating">
-      <div class="stars">★★★★★</div>
-      <div class="rating-text">5.0 / 5</div>
-    </div>
-    <p class="testimonials-cta">Consultez mes avis clients vérifiés sur Google</p>
-    <a href="#" class="btn btn-primary" target="_blank">
-      <i class="fab fa-google"></i> Voir les avis Google
-    </a>
-  </section>
-
-  <!-- CONTACT -->
+  <!-- 9. PRÊT À PASSER À L'ACTION -->
   <section class="contact-section">
     <h2>Prêt à passer à l'action ?</h2>
     <p>Discutons de vos objectifs et voyons comment je peux vous accompagner</p>
@@ -627,7 +627,7 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <!-- INFOLETTRE -->
+  <!-- 10. INFOLETTRE -->
   <section class="newsletter-section">
     <div class="newsletter-header">
       <h2>Restez informé</h2>

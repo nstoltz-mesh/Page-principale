@@ -23,212 +23,54 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
-body { 
-  font-family: 'Inter', sans-serif; 
-  background-color: var(--gris-clair); 
-  color: var(--texte);
-  line-height: 1.6;
-}
-
-body.modal-open {
-  overflow: hidden;
-}
+body { font-family: 'Inter', sans-serif; background-color: var(--gris-clair); color: var(--texte); line-height: 1.6; }
+body.modal-open { overflow: hidden; }
 
 /* ===== HERO ===== */
-.hero {
-  width: 100%;
-  background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%);
-  padding: 80px 32px 64px;
-  text-align: center;
-}
+.hero { width: 100%; background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%); padding: 80px 32px 64px; text-align: center; }
 .hero-content { max-width: 900px; margin: 0 auto; }
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--blanc);
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-.hero p {
-  font-size: 1.15rem;
-  color: var(--bleu-clair);
-  margin-bottom: 40px;
-  line-height: 1.7;
-}
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: var(--blanc); line-height: 1.2; margin-bottom: 20px; }
+.hero p { font-size: 1.15rem; color: var(--bleu-clair); margin-bottom: 40px; line-height: 1.7; }
 .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
 /* ===== BOUTONS ===== */
-.btn {
-  display: inline-block;
-  padding: 14px 32px;
-  border-radius: 10px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: none;
-}
+.btn { display: inline-block; padding: 14px 32px; border-radius: 10px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.3s ease; cursor: pointer; border: none; }
 .btn-primary { background: var(--bleu-clair); color: var(--vert-fonce); }
 .btn-primary:hover { background: var(--blanc); transform: translateY(-2px); }
-.btn-secondary {
-  background: rgba(255,255,255,0.13);
-  color: var(--blanc);
-  border: 1px solid rgba(255,255,255,0.3);
-}
+.btn-secondary { background: rgba(255,255,255,0.13); color: var(--blanc); border: 1px solid rgba(255,255,255,0.3); }
 .btn-secondary:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.5); }
+.btn-outline { background: transparent; color: var(--teal); border: 2px solid var(--teal); padding: 12px 28px; }
+.btn-outline:hover { background: var(--teal); color: var(--blanc); transform: translateY(-2px); }
 
 /* ===== CONTENEUR ===== */
 main { max-width: 1200px; margin: 0 auto; padding: 60px 24px; }
 
 /* ===== TITRES ===== */
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--vert-fonce);
-  text-align: center;
-  margin-bottom: 16px;
-}
-.section-subtitle {
-  text-align: center;
-  color: #666;
-  font-size: 1rem;
-  margin-bottom: 48px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
+.section-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; color: var(--vert-fonce); text-align: center; margin-bottom: 16px; }
+.section-subtitle { text-align: center; color: #666; font-size: 1rem; margin-bottom: 48px; max-width: 700px; margin-left: auto; margin-right: auto; }
 
 /* ===== CRÉDIBILITÉ ===== */
-.credibility {
-  background: var(--blanc);
-  border-radius: 16px;
-  padding: 32px 40px;
-  margin-bottom: 64px;
-  box-shadow: 0 2px 16px rgba(0,34,28,0.08);
-  border-top: 4px solid var(--vert-logo);
-}
+.credibility { background: var(--blanc); border-radius: 16px; padding: 32px 40px; margin-bottom: 64px; box-shadow: 0 2px 16px rgba(0,34,28,0.08); border-top: 4px solid var(--vert-logo); }
 .cred-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; text-align: center; }
 .cred-item { display: flex; flex-direction: column; align-items: center; }
-.cred-icon {
-  width: 56px; height: 56px; border-radius: 50%;
-  background: var(--gris-clair);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.5rem; margin-bottom: 12px; color: var(--teal);
-}
+.cred-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--gris-clair); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 12px; color: var(--teal); }
 .cred-label { font-size: 0.75rem; color: #999; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
 .cred-value { font-size: 1.05rem; font-weight: 600; color: var(--vert-fonce); line-height: 1.4; }
-.badge-pending {
-  display: inline-block; background: #fff3cd; color: #856404;
-  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; margin-left: 6px; font-weight: 500;
-}
-
-/* ===== CARDS ===== */
-.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 64px; }
-
-.card {
-  background: var(--blanc);
-  border-radius: 14px;
-  padding: 32px;
-  box-shadow: 0 2px 16px rgba(0,34,28,0.07);
-  border-top: 4px solid var(--vert-logo);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-}
-.card.clickable:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,34,28,0.12);
-  cursor: pointer;
-}
-.card.teal-top { border-top-color: var(--teal); }
-.card-icon {
-  width: 48px; height: 48px; border-radius: 12px;
-  background: var(--gris-clair);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem; margin-bottom: 16px; color: var(--vert-logo);
-}
-.card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--vert-fonce); margin-bottom: 12px; font-weight: 600; }
-.card p { color: #555; font-size: 0.95rem; line-height: 1.65; margin-bottom: 16px; }
-.card-link {
-  color: var(--teal); font-weight: 600; text-decoration: none;
-  font-size: 0.9rem; display: inline-flex; align-items: center;
-  gap: 6px; transition: gap 0.3s ease; cursor: pointer;
-  margin-top: auto;
-}
-.card-link:hover { gap: 10px; text-decoration: underline; }
-.card-price {
-  display: inline-block; background: #e8f4e9; color: var(--vert-logo);
-  padding: 4px 12px; border-radius: 6px; font-weight: 600; font-size: 0.9rem; margin-top: 8px;
-}
-
-/* ===== OUTILS ===== */
-.tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 64px; }
-.tool-card {
-  background: var(--blanc); border-radius: 14px; padding: 28px 24px;
-  box-shadow: 0 2px 16px rgba(0,34,28,0.07);
-  position: relative; overflow: hidden;
-  transition: transform 0.3s ease;
-  text-decoration: none; color: inherit; display: block;
-}
-.tool-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-  background: linear-gradient(to right, var(--vert-logo), var(--teal));
-}
-.tool-card:hover { transform: translateY(-3px); cursor: pointer; }
-.tool-icon { font-size: 2rem; margin-bottom: 12px; color: var(--teal); }
-.tool-card h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--vert-fonce); margin-bottom: 8px; font-weight: 600; }
-.tool-card p { font-size: 0.85rem; color: #666; line-height: 1.5; }
+.badge-pending { display: inline-block; background: #fff3cd; color: #856404; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; margin-left: 6px; font-weight: 500; }
 
 /* ===== À PROPOS ===== */
-.about-section {
-  background: var(--blanc); border-radius: 16px; padding: 48px;
-  margin-bottom: 64px; box-shadow: 0 2px 16px rgba(0,34,28,0.07);
-  display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: center;
-}
+.about-section { background: var(--blanc); border-radius: 16px; padding: 48px; margin-bottom: 64px; box-shadow: 0 2px 16px rgba(0,34,28,0.07); display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: center; }
 .about-text h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--vert-fonce); margin-bottom: 20px; }
 .about-text p { color: #555; font-size: 1rem; line-height: 1.8; margin-bottom: 16px; }
 .about-highlights { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
 .highlight-item { display: flex; align-items: center; gap: 12px; }
-.highlight-icon {
-  width: 32px; height: 32px; border-radius: 50%;
-  background: var(--gris-clair);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.9rem; flex-shrink: 0; color: var(--vert-logo);
-}
+.highlight-icon { width: 32px; height: 32px; border-radius: 50%; background: var(--gris-clair); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; color: var(--vert-logo); }
 .highlight-text { font-size: 0.95rem; color: var(--vert-fonce); font-weight: 500; }
 .about-image { border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,34,28,0.15); }
 .about-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* ===== PARTENAIRES ===== */
-.partners-section {
-  background: var(--blanc); border-radius: 16px; padding: 48px 32px;
-  margin-bottom: 64px; box-shadow: 0 2px 16px rgba(0,34,28,0.07); overflow: hidden;
-}
-.partners-section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--vert-fonce); text-align: center; margin-bottom: 48px; }
-.carousel-container { position: relative; width: 100%; overflow: hidden; padding: 20px 0; }
-.carousel-track { display: flex; gap: 60px; animation: scroll 30s linear infinite; width: fit-content; }
-.carousel-container:hover .carousel-track { animation-play-state: paused; }
-.carousel-item {
-  flex-shrink: 0; width: 180px; height: 100px;
-  display: flex; align-items: center; justify-content: center;
-  filter: grayscale(100%); opacity: 0.6; transition: all 0.4s ease;
-}
-.carousel-item:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.05); }
-.carousel-item img { max-width: 100%; max-height: 100%; object-fit: contain; }
-@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
 /* ===== TÉMOIGNAGES ===== */
-.testimonials-section {
-  background: var(--blanc); border-radius: 16px; padding: 48px;
-  margin-bottom: 64px; box-shadow: 0 2px 16px rgba(0,34,28,0.07); text-align: center;
-}
+.testimonials-section { background: var(--blanc); border-radius: 16px; padding: 48px; margin-bottom: 64px; box-shadow: 0 2px 16px rgba(0,34,28,0.07); text-align: center; }
 .testimonials-section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--vert-fonce); margin-bottom: 16px; }
 .testimonials-section p { color: #666; font-size: 1rem; margin-bottom: 32px; }
 .google-rating { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 24px; }
@@ -236,128 +78,191 @@ main { max-width: 1200px; margin: 0 auto; padding: 60px 24px; }
 .rating-text { font-size: 1.1rem; color: var(--vert-fonce); font-weight: 600; }
 .testimonials-cta { font-size: 0.95rem; color: #666; margin-bottom: 24px; }
 
-/* ===== CONTACT ===== */
-.contact-section {
-  background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%);
-  border-radius: 16px; padding: 56px 48px; margin-bottom: 64px;
-  text-align: center; display: flex; flex-direction: column; align-items: center;
+/* ===================================================================
+   SPLIT LAYOUT — SERVICES PRINCIPAUX
+   ================================================================= */
+.services-split { margin-bottom: 64px; }
+.split-row { display: grid; grid-template-columns: 320px 1fr; gap: 0; background: var(--blanc); border-radius: 16px; box-shadow: 0 2px 16px rgba(0,34,28,0.07); margin-bottom: 20px; overflow: hidden; transition: box-shadow 0.3s ease; }
+.split-row:hover { box-shadow: 0 6px 24px rgba(0,34,28,0.12); }
+.split-visual { background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 32px; gap: 16px; min-height: 200px; }
+.split-icon { width: 64px; height: 64px; border-radius: 16px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--blanc); }
+.split-stat { text-align: center; }
+.split-stat-num { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--blanc); line-height: 1; }
+.split-stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 6px; }
+.split-content { padding: 40px 44px; display: flex; flex-direction: column; justify-content: center; }
+.split-tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 10px; }
+.split-content h3 { font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--vert-fonce); margin-bottom: 12px; font-weight: 600; }
+.split-content p { color: #555; font-size: 0.97rem; line-height: 1.75; margin-bottom: 20px; }
+.split-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 99px; background: var(--gris-clair); color: var(--vert-fonce); font-size: 0.78rem; font-weight: 500; }
+.pill i { color: var(--teal); font-size: 0.72rem; }
+.split-link { color: var(--teal); font-weight: 600; text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; transition: gap 0.25s ease; }
+.split-link:hover { gap: 10px; text-decoration: underline; }
+.split-price-tag { display: inline-block; background: #e8f4e9; color: var(--vert-logo); padding: 4px 12px; border-radius: 6px; font-weight: 600; font-size: 0.88rem; margin-bottom: 18px; width: fit-content; }
+.split-row.reverse { direction: rtl; }
+.split-row.reverse > * { direction: ltr; }
+
+/* ===================================================================
+   FEATURE ROW — SERVICES COMPLÉMENTAIRES
+   ================================================================= */
+.feature-row-section { background: var(--blanc); border-radius: 16px; padding: 48px 52px; margin-bottom: 64px; box-shadow: 0 2px 16px rgba(0,34,28,0.07); border-top: 4px solid var(--teal); }
+.feature-row-section .section-title { text-align: left; margin-bottom: 6px; }
+.feature-row-section .section-subtitle { text-align: left; margin-left: 0; margin-bottom: 36px; }
+.feature-list { display: flex; flex-direction: column; gap: 0; }
+.feature-item { display: grid; grid-template-columns: 52px 1fr auto; align-items: center; gap: 20px; padding: 20px 8px; border-bottom: 1px solid #f0f5f0; cursor: pointer; transition: background 0.2s ease; border-radius: 8px; }
+.feature-item:last-child { border-bottom: none; }
+.feature-item:hover { background: var(--gris-clair); }
+.feature-icon-wrap { width: 52px; height: 52px; border-radius: 12px; background: linear-gradient(135deg, var(--vert-fonce), var(--teal)); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; color: var(--blanc); flex-shrink: 0; }
+.feature-text h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--vert-fonce); font-weight: 600; margin-bottom: 3px; }
+.feature-text p { font-size: 0.87rem; color: #666; line-height: 1.5; }
+.feature-arrow { width: 36px; height: 36px; border-radius: 50%; background: var(--gris-clair); display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 0.85rem; transition: all 0.25s ease; flex-shrink: 0; }
+.feature-item:hover .feature-arrow { background: var(--teal); color: var(--blanc); transform: translateX(3px); }
+.feature-cta { display: flex; justify-content: center; margin-top: 36px; padding-top: 32px; border-top: 1px solid #f0f5f0; }
+
+/* ===================================================================
+   OUTILS GRATUITS — CAROUSEL 3 VISIBLES + NAVIGATION
+   ================================================================= */
+.tools-section { margin-bottom: 64px; }
+
+.tools-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
+
+.tools-carousel-viewport {
+  overflow: hidden;
+  flex: 1;
+  border-radius: 14px;
+}
+
+.tools-carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.tool-card {
+  background: var(--blanc);
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 16px rgba(0,34,28,0.07);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  /* largeur calculée en JS pour afficher exactement 3 */
+  flex-shrink: 0;
+}
+.tool-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(to right, var(--vert-logo), var(--teal));
+}
+.tool-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,34,28,0.12); }
+.tool-icon { font-size: 2rem; margin-bottom: 12px; color: var(--teal); }
+.tool-card h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--vert-fonce); margin-bottom: 8px; font-weight: 600; }
+.tool-card p { font-size: 0.85rem; color: #666; line-height: 1.5; }
+
+/* Boutons navigation */
+.carousel-nav-btn {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--blanc);
+  border: 2px solid #e0ede0;
+  color: var(--teal);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,34,28,0.08);
+}
+.carousel-nav-btn:hover:not(:disabled) {
+  background: var(--teal);
+  color: var(--blanc);
+  border-color: var(--teal);
+  transform: scale(1.08);
+}
+.carousel-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Indicateurs dots */
+.tools-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+.tools-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+  padding: 0;
+}
+.tools-dot.active {
+  background: var(--teal);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ===== PARTENAIRES ===== */
+.partners-section { background: var(--blanc); border-radius: 16px; padding: 48px 32px; margin-bottom: 64px; box-shadow: 0 2px 16px rgba(0,34,28,0.07); overflow: hidden; }
+.partners-section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--vert-fonce); text-align: center; margin-bottom: 48px; }
+.carousel-container { position: relative; width: 100%; overflow: hidden; padding: 20px 0; }
+.carousel-track { display: flex; gap: 60px; animation: scroll 30s linear infinite; width: fit-content; }
+.carousel-container:hover .carousel-track { animation-play-state: paused; }
+.carousel-item { flex-shrink: 0; width: 180px; height: 100px; display: flex; align-items: center; justify-content: center; filter: grayscale(100%); opacity: 0.6; transition: all 0.4s ease; }
+.carousel-item:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.05); }
+.carousel-item img { max-width: 100%; max-height: 100%; object-fit: contain; }
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ===== CONTACT ===== */
+.contact-section { background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--teal) 100%); border-radius: 16px; padding: 56px 48px; margin-bottom: 64px; text-align: center; display: flex; flex-direction: column; align-items: center; }
 .contact-section h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--blanc); margin-bottom: 16px; }
 .contact-section > p { color: var(--bleu-clair); font-size: 1.05rem; margin-bottom: 32px; max-width: 700px; }
 .contact-info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-bottom: 32px; width: 100%; max-width: 800px; }
 .contact-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
-.contact-icon {
-  width: 48px; height: 48px; border-radius: 50%;
-  background: rgba(255,255,255,0.13);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.3rem; color: var(--blanc);
-}
-.contact-label { font-size: 0.75rem; color: var(--bleu-clair); text-transform: uppercase; letter-spacing: 1.5px; text-align: center; width: 100%; }
+.contact-icon { width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.13); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--blanc); }
+.contact-label { font-size: 0.75rem; color: var(--bleu-clair); text-transform: uppercase; letter-spacing: 1.5px; text-align: center; }
 .contact-value { color: var(--blanc); font-weight: 600; font-size: 0.95rem; text-align: center; }
 .contact-value a { color: var(--blanc); text-decoration: none; }
 .contact-value a:hover { text-decoration: underline; }
 .social-links { display: flex; justify-content: center; gap: 16px; margin-top: 32px; }
-.social-link {
-  width: 48px; height: 48px; border-radius: 50%;
-  background: rgba(255,255,255,0.13);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--blanc); font-size: 1.3rem; text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.25); transition: all 0.3s ease;
-}
+.social-link { width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.13); display: flex; align-items: center; justify-content: center; color: var(--blanc); font-size: 1.3rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25); transition: all 0.3s ease; }
 .social-link:hover { background: rgba(255,255,255,0.25); transform: translateY(-3px); }
 
 /* ===== INFOLETTRE ===== */
-.newsletter-section {
-  background: var(--blanc); border-radius: 16px; padding: 48px;
-  margin-bottom: 64px; box-shadow: 0 2px 16px rgba(0,34,28,0.07); border-top: 4px solid var(--teal);
-}
+.newsletter-section { background: var(--blanc); border-radius: 16px; padding: 48px; margin-bottom: 64px; box-shadow: 0 2px 16px rgba(0,34,28,0.07); border-top: 4px solid var(--teal); }
 .newsletter-header { text-align: center; margin-bottom: 32px; }
 .newsletter-header h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--vert-fonce); margin-bottom: 16px; }
 .newsletter-header p { color: #666; font-size: 1rem; line-height: 1.7; max-width: 700px; margin: 0 auto; }
 .newsletter-form-container { max-width: 800px; margin: 0 auto; border-radius: 18px; overflow: hidden; }
 
-/* ===================================
-   MODALE CSS CUSTOM
-   =================================== */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 34, 28, 0.82);
-  z-index: 9999;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  padding-top: 80px;
-  overflow-y: auto;
-}
-.modal-overlay.active {
-  display: flex;
-}
-
-.modal-content {
-  background: var(--blanc);
-  border-radius: 16px;
-  width: 100%;
-  max-width: 660px;
-  position: relative;
-  box-shadow: 0 8px 32px rgba(0,34,28,0.3);
-  border-top: 4px solid var(--vert-logo);
-  animation: slideUp 0.3s ease;
-  overflow: hidden;
-  max-height: calc(100vh - 96px);
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-header {
-  padding: 14px 20px 12px;
-  border-bottom: 1px solid var(--gris-clair);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-shrink: 0;
-}
-.modal-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
-  color: var(--vert-fonce);
-  font-weight: 600;
-}
-.modal-close {
-  background: none; border: none;
-  font-size: 1.8rem; color: #999;
-  cursor: pointer;
-  width: 32px; height: 32px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 50%; transition: all 0.3s ease; line-height: 1;
-}
+/* ===== MODALE ===== */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,34,28,0.82); z-index: 9999; align-items: center; justify-content: center; padding: 16px; padding-top: 80px; overflow-y: auto; }
+.modal-overlay.active { display: flex; }
+.modal-content { background: var(--blanc); border-radius: 16px; width: 100%; max-width: 660px; position: relative; box-shadow: 0 8px 32px rgba(0,34,28,0.3); border-top: 4px solid var(--vert-logo); animation: slideUp 0.3s ease; overflow: hidden; max-height: calc(100vh - 96px); display: flex; flex-direction: column; }
+.modal-header { padding: 14px 20px 12px; border-bottom: 1px solid var(--gris-clair); display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+.modal-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--vert-fonce); font-weight: 600; }
+.modal-close { background: none; border: none; font-size: 1.8rem; color: #999; cursor: pointer; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all 0.3s ease; line-height: 1; }
 .modal-close:hover { background: var(--gris-clair); color: var(--vert-fonce); }
-
-.modal-body {
-  flex: 1;
-  overflow-y: auto;
-  min-height: 0;
-}
-
-.modal-body iframe {
-  width: 100%;
-  height: 520px;
-  border: none;
-  display: block;
-}
-
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+.modal-body { flex: 1; overflow-y: auto; min-height: 0; }
+.modal-body iframe { width: 100%; height: 520px; border: none; display: block; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
 /* ===== ANIMATIONS ===== */
 html { scroll-behavior: smooth; }
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 .fade-in { animation: fadeInUp 0.8s ease-out; }
 
 /* ===== RESPONSIVE ===== */
@@ -365,13 +270,16 @@ html { scroll-behavior: smooth; }
   .about-section { grid-template-columns: 1fr; text-align: center; }
   .about-image { max-width: 300px; margin: 0 auto; }
   .about-highlights { align-items: center; }
+  .split-row { grid-template-columns: 1fr; }
+  .split-row.reverse { direction: ltr; }
+  .split-visual { min-height: 140px; flex-direction: row; justify-content: center; gap: 24px; padding: 28px 24px; }
+  .split-content { padding: 32px 28px; }
+  .feature-row-section { padding: 36px 28px; }
 }
 @media(max-width: 768px) {
   .hero h1 { font-size: 2rem; }
   .hero p { font-size: 1rem; }
   .section-title { font-size: 1.6rem; }
-  .cards-grid { grid-template-columns: 1fr; }
-  .tools-grid { grid-template-columns: 1fr; }
   .contact-info { grid-template-columns: 1fr; gap: 32px; }
   .about-section { padding: 32px 24px; }
   .contact-section { padding: 40px 24px; }
@@ -381,6 +289,10 @@ html { scroll-behavior: smooth; }
   .modal-body iframe { height: 480px; }
   .carousel-item { width: 140px; height: 80px; }
   .carousel-track { gap: 40px; }
+  .feature-item { grid-template-columns: 44px 1fr; }
+  .feature-arrow { display: none; }
+  .feature-row-section { padding: 28px 20px; }
+  .carousel-nav-btn { width: 36px; height: 36px; font-size: 0.85rem; }
 }
 </style>
 </head>
@@ -466,109 +378,212 @@ html { scroll-behavior: smooth; }
     </a>
   </section>
 
-  <!-- 5. SERVICES PRINCIPAUX -->
-  <section id="services">
+  <!-- 5. SERVICES — SPLIT LAYOUT -->
+  <section id="services" class="services-split">
     <h2 class="section-title">Services</h2>
     <p class="section-subtitle">Une approche complète pour bâtir et protéger votre patrimoine</p>
-    <div class="cards-grid">
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+
+    <div class="split-row">
+      <div class="split-visual">
+        <div class="split-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="split-stat">
+          <div class="split-stat-num">REER · CELI</div>
+          <div class="split-stat-label">Fonds · FNB · Seg</div>
+        </div>
+      </div>
+      <div class="split-content">
+        <div class="split-tag">Placements</div>
         <h3>Gestion de placements</h3>
         <p>Stratégies personnalisées pour faire croître votre épargne en fonction de votre profil, vos objectifs et votre tolérance au risque.</p>
-        <a href="https://www.nicolasstoltz.com/placements" class="card-link" target="_top">En savoir plus <i class="fas fa-arrow-right"></i></a>
+        <div class="split-pills">
+          <span class="pill"><i class="fas fa-check"></i> REER &amp; CELI</span>
+          <span class="pill"><i class="fas fa-check"></i> FNB &amp; fonds</span>
+          <span class="pill"><i class="fas fa-check"></i> Profil investisseur</span>
+        </div>
+        <a href="https://www.nicolasstoltz.com/placements" class="split-link" target="_top">En savoir plus <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="card teal-top">
-        <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+    </div>
+
+    <div class="split-row reverse">
+      <div class="split-visual">
+        <div class="split-icon"><i class="fas fa-bullseye"></i></div>
+        <div class="split-stat">
+          <div class="split-stat-num">Retraite · Impôt</div>
+          <div class="split-stat-label">Flux · Succession</div>
+        </div>
+      </div>
+      <div class="split-content">
+        <div class="split-tag">Planification</div>
         <h3>Planification financière</h3>
         <p>Planification de retraite, optimisation fiscale et gestion des flux monétaires pour sécuriser votre avenir familial.</p>
-        <a href="https://www.nicolasstoltz.com/planification-financiere" class="card-link" target="_top">En savoir plus <i class="fas fa-arrow-right"></i></a>
+        <div class="split-pills">
+          <span class="pill"><i class="fas fa-check"></i> RRQ &amp; PSV</span>
+          <span class="pill"><i class="fas fa-check"></i> FERR &amp; décaissement</span>
+          <span class="pill"><i class="fas fa-check"></i> Optimisation fiscale</span>
+        </div>
+        <a href="https://www.nicolasstoltz.com/planification-financiere" class="split-link" target="_top">En savoir plus <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+    </div>
+
+    <div class="split-row">
+      <div class="split-visual">
+        <div class="split-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="split-stat">
+          <div class="split-stat-num">Vie · MG · Inv.</div>
+          <div class="split-stat-label">Protection personnelle</div>
+        </div>
+      </div>
+      <div class="split-content">
+        <div class="split-tag">Assurances de personnes</div>
         <h3>Assurances de personnes</h3>
         <p>Protection complète : assurance temporaire, permanente, maladies graves et invalidité selon vos besoins réels.</p>
-        <a href="https://www.nicolasstoltz.com/assurances" class="card-link" target="_top">En savoir plus <i class="fas fa-arrow-right"></i></a>
+        <div class="split-pills">
+          <span class="pill"><i class="fas fa-check"></i> Vie temporaire &amp; permanente</span>
+          <span class="pill"><i class="fas fa-check"></i> Maladies graves</span>
+          <span class="pill"><i class="fas fa-check"></i> Invalidité</span>
+        </div>
+        <a href="https://www.nicolasstoltz.com/assurances" class="split-link" target="_top">En savoir plus <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="card teal-top">
-        <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+    </div>
+
+    <div class="split-row reverse">
+      <div class="split-visual">
+        <div class="split-icon"><i class="fas fa-lightbulb"></i></div>
+        <div class="split-stat">
+          <div class="split-stat-num">150 $</div>
+          <div class="split-stat-label">par consultation</div>
+        </div>
+      </div>
+      <div class="split-content">
+        <div class="split-tag">Coaching · Autonomes</div>
         <h3>Coaching financier</h3>
         <p>Pour les investisseurs autonomes qui veulent garder le contrôle tout en bénéficiant d'une expertise professionnelle.</p>
-        <span class="card-price">150 $ / consultation</span>
-        <a href="https://www.nicolasstoltz.com/coaching" class="card-link" target="_top">En savoir plus <i class="fas fa-arrow-right"></i></a>
+        <div class="split-pills">
+          <span class="pill"><i class="fas fa-check"></i> Session 1h</span>
+          <span class="pill"><i class="fas fa-check"></i> Analyse de portefeuille</span>
+          <span class="pill"><i class="fas fa-check"></i> Revue de stratégie</span>
+        </div>
+        <div class="split-price-tag">150 $ / consultation</div>
+        <a href="https://www.nicolasstoltz.com/coaching" class="split-link" target="_top">En savoir plus <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+    </div>
+
+    <div class="split-row">
+      <div class="split-visual">
+        <div class="split-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+        <div class="split-stat">
+          <div class="split-stat-num">T1 · TP1</div>
+          <div class="split-stat-label">Fédéral · Québec</div>
+        </div>
+      </div>
+      <div class="split-content">
+        <div class="split-tag">Impôts · Québec</div>
         <h3>Déclaration de revenus</h3>
-        <p>Accompagnement personnalisé pour la production de vos déclarations fédérale et provinciale — Particuliers & travailleurs autonomes · Québec</p>
-        <a href="https://www.nicolasstoltz.com/impots" class="card-link" target="_top">En savoir plus <i class="fas fa-arrow-right"></i></a>
+        <p>Accompagnement personnalisé pour la production de vos déclarations fédérale et provinciale — Particuliers &amp; travailleurs autonomes.</p>
+        <div class="split-pills">
+          <span class="pill"><i class="fas fa-check"></i> Particuliers</span>
+          <span class="pill"><i class="fas fa-check"></i> Travailleurs autonomes</span>
+          <span class="pill"><i class="fas fa-check"></i> Optimisation fiscale</span>
+        </div>
+        <a href="https://www.nicolasstoltz.com/impots" class="split-link" target="_top">En savoir plus <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
 
-  <!-- 6. SERVICES COMPLÉMENTAIRES -->
-  <section id="services-complementaires">
+  <!-- 6. SERVICES COMPLÉMENTAIRES — FEATURE ROW -->
+  <section id="services-complementaires" class="feature-row-section">
     <h2 class="section-title">Services complémentaires</h2>
     <p class="section-subtitle">Solutions partenaires pour protéger et optimiser votre patrimoine</p>
-    <div class="cards-grid">
-      <div class="card teal-top clickable" onclick="openModal()">
-        <div class="card-icon"><i class="fas fa-home"></i></div>
-        <h3>Courtier immobilier</h3>
-        <p>Accompagnement expert pour l'achat ou la vente de votre propriété avec les meilleurs conseillers du marché.</p>
-        <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
+    <div class="feature-list">
+      <div class="feature-item" onclick="openModal()">
+        <div class="feature-icon-wrap"><i class="fas fa-home"></i></div>
+        <div class="feature-text">
+          <h4>Courtier immobilier</h4>
+          <p>Accompagnement expert pour l'achat ou la vente de votre propriété avec les meilleurs conseillers du marché.</p>
+        </div>
+        <div class="feature-arrow"><i class="fas fa-arrow-right"></i></div>
       </div>
-      <div class="card teal-top clickable" onclick="openModal()">
-        <div class="card-icon"><i class="fas fa-house-user"></i></div>
-        <h3>Hypothèque</h3>
-        <p>Financement immobilier optimal adapté à votre situation et vos objectifs patrimoniaux.</p>
-        <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
+      <div class="feature-item" onclick="openModal()">
+        <div class="feature-icon-wrap"><i class="fas fa-house-user"></i></div>
+        <div class="feature-text">
+          <h4>Hypothèque</h4>
+          <p>Financement immobilier optimal adapté à votre situation et vos objectifs patrimoniaux.</p>
+        </div>
+        <div class="feature-arrow"><i class="fas fa-arrow-right"></i></div>
       </div>
-      <div class="card teal-top clickable" onclick="openModal()">
-        <div class="card-icon"><i class="fas fa-car"></i></div>
-        <h3>Assurance dommage</h3>
-        <p>Protection complète pour votre véhicule et votre habitation avec les meilleures garanties.</p>
-        <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
+      <div class="feature-item" onclick="openModal()">
+        <div class="feature-icon-wrap"><i class="fas fa-car"></i></div>
+        <div class="feature-text">
+          <h4>Assurance dommage</h4>
+          <p>Protection complète pour votre véhicule et votre habitation avec les meilleures garanties.</p>
+        </div>
+        <div class="feature-arrow"><i class="fas fa-arrow-right"></i></div>
       </div>
-      <div class="card teal-top clickable" onclick="openModal()">
-        <div class="card-icon"><i class="fas fa-plane"></i></div>
-        <h3>Assurance voyage</h3>
-        <p>Couverture optimale pour vos déplacements personnels et professionnels à l'international.</p>
-        <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
+      <div class="feature-item" onclick="openModal()">
+        <div class="feature-icon-wrap"><i class="fas fa-plane"></i></div>
+        <div class="feature-text">
+          <h4>Assurance voyage</h4>
+          <p>Couverture optimale pour vos déplacements personnels et professionnels à l'international.</p>
+        </div>
+        <div class="feature-arrow"><i class="fas fa-arrow-right"></i></div>
       </div>
-      <div class="card teal-top clickable" onclick="openModal()">
-        <div class="card-icon"><i class="fas fa-building"></i></div>
-        <h3>Assurance collective</h3>
-        <p>Solutions d'assurance complètes pour entreprises et régimes collectifs d'employés.</p>
-        <span class="card-link">Faire une demande <i class="fas fa-arrow-right"></i></span>
+      <div class="feature-item" onclick="openModal()">
+        <div class="feature-icon-wrap"><i class="fas fa-building"></i></div>
+        <div class="feature-text">
+          <h4>Assurance collective</h4>
+          <p>Solutions d'assurance complètes pour entreprises et régimes collectifs d'employés.</p>
+        </div>
+        <div class="feature-arrow"><i class="fas fa-arrow-right"></i></div>
       </div>
+    </div>
+    <div class="feature-cta">
+      <button onclick="openModal()" class="btn btn-outline">
+        <i class="fas fa-paper-plane"></i>&nbsp; Faire une demande
+      </button>
     </div>
   </section>
 
-  <!-- 7. OUTILS GRATUITS -->
-  <section id="outils">
+  <!-- 7. OUTILS GRATUITS — CAROUSEL -->
+  <section id="outils" class="tools-section">
     <h2 class="section-title">Outils gratuits</h2>
     <p class="section-subtitle">Calculateurs et ressources pour mieux comprendre vos finances</p>
-    <div class="tools-grid">
-      <a href="https://www.nicolasstoltz.com/calculateur-intrets-composes" class="tool-card" target="_top">
-        <div class="tool-icon"><i class="fas fa-piggy-bank"></i></div>
-        <h4>Calculateur d'intérêts composés</h4>
-        <p>Projetez la croissance de vos investissements dans le temps</p>
-      </a>
-      <a href="https://www.nicolasstoltz.com/calculatrice-emprunt" class="tool-card" target="_top">
-        <div class="tool-icon"><i class="fas fa-money-bill-wave"></i></div>
-        <h4>Calculateur de coût d'emprunt</h4>
-        <p>Estimez le coût réel de vos emprunts et financements</p>
-      </a>
-      <a href="https://www.nicolasstoltz.com/table-impots" class="tool-card" target="_top">
-        <div class="tool-icon"><i class="fas fa-file-invoice"></i></div>
-        <h4>Table d'impôts — Québec</h4>
-        <p>Consultez les tranches d'imposition et taux effectifs</p>
-      </a>
-      <a href="https://www.nicolasstoltz.com/honoraires" class="tool-card" target="_top">
-        <div class="tool-icon"><i class="fas fa-gem"></i></div>
-        <h4>Frais de service</h4>
-        <p>Structure tarifaire transparente avec réductions progressives</p>
-      </a>
+
+    <div class="tools-carousel-wrapper">
+      <button class="carousel-nav-btn" id="tools-prev" aria-label="Précédent" onclick="toolsNav(-1)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="tools-carousel-viewport" id="tools-viewport">
+        <div class="tools-carousel-track" id="tools-track">
+          <a href="https://www.nicolasstoltz.com/calculateur-intrets-composes" class="tool-card" target="_top">
+            <div class="tool-icon"><i class="fas fa-piggy-bank"></i></div>
+            <h4>Calculateur d'intérêts composés</h4>
+            <p>Projetez la croissance de vos investissements dans le temps</p>
+          </a>
+          <a href="https://www.nicolasstoltz.com/calculatrice-emprunt" class="tool-card" target="_top">
+            <div class="tool-icon"><i class="fas fa-money-bill-wave"></i></div>
+            <h4>Calculateur de coût d'emprunt</h4>
+            <p>Estimez le coût réel de vos emprunts et financements</p>
+          </a>
+          <a href="https://www.nicolasstoltz.com/table-impots" class="tool-card" target="_top">
+            <div class="tool-icon"><i class="fas fa-file-invoice"></i></div>
+            <h4>Table d'impôts — Québec</h4>
+            <p>Consultez les tranches d'imposition et taux effectifs</p>
+          </a>
+          <a href="https://www.nicolasstoltz.com/honoraires" class="tool-card" target="_top">
+            <div class="tool-icon"><i class="fas fa-gem"></i></div>
+            <h4>Frais de service</h4>
+            <p>Structure tarifaire transparente avec réductions progressives</p>
+          </a>
+        </div>
+      </div>
+
+      <button class="carousel-nav-btn" id="tools-next" aria-label="Suivant" onclick="toolsNav(1)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
+
+    <div class="tools-dots" id="tools-dots"></div>
   </section>
 
   <!-- 8. PARTENAIRES -->
@@ -602,7 +617,7 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <!-- 9. PRÊT À PASSER À L'ACTION -->
+  <!-- 9. CONTACT -->
   <section class="contact-section">
     <h2>Prêt à passer à l'action ?</h2>
     <p>Discutons de vos objectifs et voyons comment je peux vous accompagner</p>
@@ -693,6 +708,7 @@ html { scroll-behavior: smooth; }
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 <script>
+/* ── MODALE ── */
 function openModal() {
   document.getElementById('contactModal').classList.add('active');
   document.body.classList.add('modal-open');
@@ -706,6 +722,7 @@ function closeModalOnOverlay(event) {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
+/* ── SMOOTH SCROLL ── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const href = this.getAttribute('href');
@@ -717,12 +734,94 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+/* ── FADE-IN OBSERVER ── */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('fade-in');
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-document.querySelectorAll('section, .card, .tool-card').forEach(el => observer.observe(el));
+document.querySelectorAll('section, .split-row, .feature-item, .tool-card').forEach(el => observer.observe(el));
+
+/* ── TOOLS CAROUSEL ── */
+(function() {
+  const track      = document.getElementById('tools-track');
+  const viewport   = document.getElementById('tools-viewport');
+  const dotsWrap   = document.getElementById('tools-dots');
+  const btnPrev    = document.getElementById('tools-prev');
+  const btnNext    = document.getElementById('tools-next');
+  const cards      = Array.from(track.querySelectorAll('.tool-card'));
+  const GAP        = 20;
+  const VISIBLE    = 3;
+  let   current    = 0;
+  let   cardW      = 0;
+
+  function getCardWidth() {
+    const vw = viewport.offsetWidth;
+    return (vw - GAP * (VISIBLE - 1)) / VISIBLE;
+  }
+
+  function setCardWidths() {
+    cardW = getCardWidth();
+    cards.forEach(c => { c.style.width = cardW + 'px'; });
+  }
+
+  const maxIndex = cards.length - VISIBLE;
+
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    for (let i = 0; i <= maxIndex; i++) {
+      const d = document.createElement('button');
+      d.className = 'tools-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Outil ' + (i + 1));
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
+    }
+  }
+
+  function updateDots() {
+    dotsWrap.querySelectorAll('.tools-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function updateButtons() {
+    btnPrev.disabled = current === 0;
+    btnNext.disabled = current >= maxIndex;
+  }
+
+  function goTo(index) {
+    current = Math.max(0, Math.min(index, maxIndex));
+    const offset = current * (cardW + GAP);
+    track.style.transform = 'translateX(-' + offset + 'px)';
+    updateDots();
+    updateButtons();
+  }
+
+  window.toolsNav = function(dir) { goTo(current + dir); };
+
+  function init() {
+    setCardWidths();
+    buildDots();
+    updateButtons();
+    goTo(0);
+  }
+
+  init();
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => { setCardWidths(); goTo(current); }, 100);
+  });
+
+  /* swipe tactile */
+  let startX = 0;
+  viewport.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  viewport.addEventListener('touchend',   e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) toolsNav(diff > 0 ? 1 : -1);
+  });
+})();
 </script>
 
 </body>
